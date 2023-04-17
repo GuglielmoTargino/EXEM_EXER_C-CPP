@@ -5,13 +5,12 @@ void sp_to_dash(const char *str);
 
 void main(void){	
 	sp_to_dash("isto é um teste\n");
-	sp_to_dash("meu teste agora");
+	sp_to_dash("meu teste agora");/* chama a função de novo*/
 }
 
 void sp_to_dash(const char *str){
 	while(*str){
 	
-		printf("%c>",*str);
 		if(*str==' ') printf("%c", '-');
 		else printf("%c", *str);
 		str++;
