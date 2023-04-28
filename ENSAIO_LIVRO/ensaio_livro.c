@@ -13,7 +13,7 @@ void main(void)
   
 }
 
-void ght() 
+void ght()/*função chamada de dentro de outra função*/
 {
 	int j=10;
 	printf( "%d-", j);
