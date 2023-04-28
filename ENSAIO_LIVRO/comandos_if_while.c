@@ -4,10 +4,10 @@
 void main(void){
 	 int magico, pitaco;
 	 
-	 magico=rand();
-	 pitaco=2;
+	 magico=rand(); /* gera numero aleatório*/
 	 printf("digite um numero_");
-	 scanf("%d",&pitaco);
+	 
+	 scanf("%d",&pitaco);/* espera digitação do teclado*/
 	 
 	 if(magico==pitaco){
 	 	printf("vc digitou %d acertou",pitaco);
