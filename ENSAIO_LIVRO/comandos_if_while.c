@@ -16,3 +16,4 @@ void main(void){
 	 	printf("magico foi %d, pitaco foi %d",magico,pitaco);
 	 	
 	 }
+}
