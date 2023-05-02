@@ -9,11 +9,11 @@ void main(void){
 	 
 	 scanf("%d",&pitaco);/* espera digitação do teclado*/
 	 
-	 if(magico==pitaco){
+	 if(magico==pitaco)
 	 	printf("vc digitou %d acertou",pitaco);
 	 	
-	 } else{
+	  else
 	 	printf("magico foi %d, pitaco foi %d",magico,pitaco);
 	 	
-	 }
+	 
 }
