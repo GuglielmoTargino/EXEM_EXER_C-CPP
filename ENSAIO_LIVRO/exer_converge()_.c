@@ -18,8 +18,8 @@ void converge(int line,char *message){
 		
 	for (i=1, j=strlen(message);i<j;i++,j--){
 		
-		_gotoxy(i,line); printf("%c",message[i-1]);
-		gotoxy(j,line); printf("%c",message[j-1]);
+		void gotoxy(i,line); printf("%c",message[i-1]);
+		void gotoxy(j,line); printf("%c",message[j-1]);
 	
 	}
 }
