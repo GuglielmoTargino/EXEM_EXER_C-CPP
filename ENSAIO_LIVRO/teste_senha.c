@@ -3,9 +3,8 @@
 # include <conio.h>
 
 void main(void){
-	
+	int x,k;
 	char str[20];
-	int x;
 	for (x=0; x<3 && strcmp(str,"senha");x++){
 		printf("Digite a senha por favor. tentativa (%d)_\n",x+1);
 		gets(str);
@@ -16,4 +15,7 @@ void main(void){
 		   
 	
 	}
+	
+	//outra forma de laço FOR, sem o incremento.
+	for(k=0;k!=45;) scanf("%d",&k);
 }
