@@ -7,6 +7,7 @@ void main(void){
 	gets(s);
 	str=s;
 	printf("%s\n",s);
+	
 	for(space=0;*str;str++){
 		if(*str!=' ')continue ;
 		space++;/*controla o laço*/
