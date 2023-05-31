@@ -7,17 +7,17 @@ void main(void){
 	for(t=0;t<3;++t){
 		for(i=0;i<4;++i){
 			num[t][i]=(t*4)+i+1;
-			
-			
-		
+			printf("valor na posição %d x %d = %3d\n",t,i,num[t][i]);
 			
 		}
+		
 	}
-		/* esse laço para imprimir*/
-	for(t=0;t<3;++t){
-		for(i=0;t<4;++i){
-			printf("%3d",num[t][i]);
+	
+		/* esse laço para imprimir
+	for(t=0;t<3;t++){
+		for(i=0;t<4;i++){
+			printf("valor na posição %d x %d = %3d\n",t,i,num[t][i]);
 			printf("\n");
 		}
-	}
+	}*/
 }
