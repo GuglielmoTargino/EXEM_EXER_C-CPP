@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=est_matriz_bdimen.c
+FileName=pq_db_matriz.c
 CompileCpp=0
 Folder=
 Compile=1

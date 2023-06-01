@@ -5,10 +5,10 @@
 /* banco de dados simples com matriz*/
 
 #define classes_ 3
-#define grades_ 30
+#define grades_ 32
 
 int grade[classes_][grades_];
-void enter_grade(void);
+void enter_grades(void);
 int get_grade(int num);
 void disp_grades(int g[][grades_]);
 
@@ -19,14 +19,14 @@ void main (void){
 		do {
 			printf("(D)igitar notas\n");
 			printf("(M)ostrar notas\n");
-			printf("(S)air");
+			printf("(S)air\n");
 			gets(str);
 			ch=toupper(*str);
 		} while (ch!='D' && ch!='M' && ch!='S');
 		
 		switch(ch){
 			case 'D':
-				enter_grade();
+				enter_grades();
 				break;
 			case 'M':
 				disp_grades(grade);
@@ -39,11 +39,11 @@ void main (void){
 }
 /* digitação das notas dos alunos*/
 
-void enter_grade(void){
+void enter_grades(void){
 	int t,i;
 	for(t=0;t<classes_;t++){
-		printf("Turma #%d",t+1);
-		for(i=0;i<grades_;++i);
+		printf("Turma #%d\n",t+1);
+		for(i=0;i<200;i++);
            grade[t][i]=get_grade(i);
 	}
 }
@@ -52,7 +52,7 @@ void enter_grade(void){
 
 get_grade(int num){
 	char s[80];
-	printf("Digite a nota do aluno # %d:\n",num+1);
+	printf("Digite a nota do aluno # %d:\n",num+1);// variavel num recebe i na chamada da função
 	gets(s);
 	return(atoi(s));
 		
