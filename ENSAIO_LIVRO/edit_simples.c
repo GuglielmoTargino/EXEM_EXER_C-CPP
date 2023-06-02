@@ -8,7 +8,7 @@ char text [max][len];
 /* iditor de texto simples*/
 
 void main (void){
-	register int t,i,j=0;
+ int t,i,j=0;
 	printf("digite uma linha vazia para sair.\n");
 	
 	for(t=0;t<max;t++){
@@ -23,4 +23,5 @@ void main (void){
 	
 		putchar('\n');
 	}
+
 }
