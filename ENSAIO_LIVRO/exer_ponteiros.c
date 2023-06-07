@@ -17,7 +17,7 @@ void main(void){
 	
 	do{
 		printf("didgite o valor");
-		scanf("%d",&value);
+		scanf("%d",&value); /*insere elementos na pilha*/
 		if(value!=0)push(value); else printf("valor do topo é %d\n",pop());
 		
 	} while (value!=-1);
