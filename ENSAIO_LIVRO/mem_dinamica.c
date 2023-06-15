@@ -5,7 +5,7 @@
 void main(void){
 	char *s;
 	int t;
-	s=malloc(800000000000);
+	s=malloc(80);
 	
 	/* se s voltar nulo, ! inverte ele , ai passa a ser verdadeiro*/
 	if(!s){
