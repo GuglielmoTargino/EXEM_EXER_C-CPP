@@ -51,7 +51,7 @@ AutoIncBuildNr=0
 SyncProduct=1
 
 [Unit1]
-FileName=mem_dinamica.c
+FileName=exer_argu_funcao.c
 CompileCpp=0
 Folder=
 Compile=1
