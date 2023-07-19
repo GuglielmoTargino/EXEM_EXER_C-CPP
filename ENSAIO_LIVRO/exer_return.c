@@ -9,7 +9,7 @@ void main(void){
 }
 /* devolve o indice de s1 em s2*/
 
-find_substr(char *s1,char *s2){
+find_substr(char *s1, char *s2){
 	int t;
 	char *p,*p2;
 	
