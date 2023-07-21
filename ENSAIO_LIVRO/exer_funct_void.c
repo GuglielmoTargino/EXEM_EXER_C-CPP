@@ -1,14 +1,19 @@
 #include <stdio.h>
 void print_vertical(char *str);
+
+
+
 void main (int argc, char *argv[]){
-	if(argc){
-		print_vertical(argv[1]);
+	/*printf("%s",argv[0]);*/
+
+	if(argc)		print_vertical(argv[0]);
 		
 	}
-	void print_vertical(char *str){
-		while(*str){
-			printf("%c\n",*str++);
-		}
+
+
+void print_vertical(char *str){
+	 while(*str)		printf("%c\n",*str++);
+		
 	}
 	
-}
+
