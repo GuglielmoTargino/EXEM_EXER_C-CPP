@@ -52,4 +52,76 @@ menu_select(void){
 	printf("2.excluir um nome_\n");
 	printf("3.lista um nome_\n");
 	printf("4.sair um nome_\n");
+	do {
+		printf("\ndigite sua escola");
+		gets(s);
+		c=atoi(s);		
+	} while(c<0||c>4);
+	return c;
 }
+//insere endereços na lista
+
+void enter(void){
+	int slot;
+	char s[80]
+	slot=find_free();
+	if(slot==-1){
+		printf("\nlista cheia_");
+		return;
+		
+	}
+	printf("digite o nome: ");
+	gets(addr_info[slot].name);
+	
+	printf("digite a rua_");
+	gets(addr_info[slot].street);
+	
+	printf("digite a cidade_");
+	gets(addr_info[slot].city);
+	
+	printf("digite o estado_");
+	gets(addr_info[slot].state);
+	
+	printf("digite o cep:");
+	gets(s);
+	addr_info[slot].zip=strtoul(s,'\0',10);
+	
+}
+
+//encontra estrutura não usada
+
+find_free(void){
+	int t;
+	for(t=0;addr_info[t].name[0] && t<MAX; ++t);
+	if(t==MAX) return-1;//nenhum elemento livre
+	return t;
+	
+}
+//apaga um endereço
+
+void delete(void){
+	int slot;
+	char s[80];
+	printf("digite o registro_");
+	gets(s);
+	slot=atoi(s);
+	if(slot>=0 && slot<MAX) addr_info[slot].name[0]='\0';
+	
+}
+
+// mostra a lista
+void list(void){
+	int t;
+	for (t=0; t<MAX; ++t){
+		if(addr_info[t].name[0]){
+			printf("%s\n",addr_info[t].name);
+			printf("%s\n",addr_info[t].street);
+			printf("%s\n",addr_info[t].city);
+			printf("%s\n",addr_info[t].state);
+			printf("%s\n", addr_info[t].zip);
+		}
+	}
+}
+
+
+
