@@ -22,7 +22,7 @@ void main(void){
 	for(;;){
 		choice=menu_select();
 		switch(choice){
-			case 1: enter()
+			case 1: enter();
 			break;
 			case 2: delete();
 			break;
@@ -63,7 +63,7 @@ menu_select(void){
 
 void enter(void){
 	int slot;
-	char s[80]
+	char s[80];
 	slot=find_free();
 	if(slot==-1){
 		printf("\nlista cheia_");
@@ -114,11 +114,11 @@ void list(void){
 	int t;
 	for (t=0; t<MAX; ++t){
 		if(addr_info[t].name[0]){
-			printf("%s\n",addr_info[t].name);
-			printf("%s\n",addr_info[t].street);
-			printf("%s\n",addr_info[t].city);
-			printf("%s\n",addr_info[t].state);
-			printf("%s\n", addr_info[t].zip);
+			printf("Nome_%s\n",addr_info[t].name);
+			printf("Rua_%s\n",addr_info[t].street);
+			printf("Cidade_%s\n",addr_info[t].city);
+			printf("Estado_%s\n",addr_info[t].state);
+			printf("CEP_%s\n", addr_info[t].zip);
 		}
 	}
 }
