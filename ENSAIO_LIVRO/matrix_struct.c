@@ -3,7 +3,7 @@
 
 #define MAX 100
 
-struct addr{
+struct dereco{
 	char name[30];
 	char street [40];
 	char city[20];
@@ -103,9 +103,9 @@ find_free(void){
 void delete(void){
 	int slot;
 	char s[80];
-	printf("digite o registro_");
+	printf("digite a ordem do registro_");
 	gets(s);
-	slot=atoi(s);
+	slot=atoi(s)-1;
 	if(slot>=0 && slot<MAX) addr_info[slot].name[0]='\0';
 	
 }
@@ -115,7 +115,7 @@ void list(void){
 	int t;
 	for (t=0; t<MAX; ++t){
 		if(addr_info[t].name[0]){
-			printf("Nome_%s\n",addr_info[t].name);
+			printf("(%d)-Nome_%s\n",t+1,addr_info[t].name);
 			printf("Rua_%s\n",addr_info[t].street);
 			printf("Cidade_%s\n",addr_info[t].city);
 			printf("Estado_%s\n",addr_info[t].state);
