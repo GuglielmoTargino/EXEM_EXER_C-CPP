@@ -73,7 +73,7 @@ void enter(void){
 	printf("digite o nome: ");
 	gets(addr_info[slot].name);
 	
-	printf("digite a rua_");
+	/*printf("digite a rua_");
 	gets(addr_info[slot].street);
 	
 	printf("digite a cidade_");
@@ -84,7 +84,7 @@ void enter(void){
 	
 	printf("digite o cep:");
 	gets(s);
-	addr_info[slot].zip=strtoul(s,'\0',10);
+	addr_info[slot].zip=strtoul(s,'\0',10);*/
 	
 }
 
