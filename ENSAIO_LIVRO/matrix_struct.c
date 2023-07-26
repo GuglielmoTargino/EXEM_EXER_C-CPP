@@ -53,7 +53,7 @@ menu_select(void){
 	printf("3.lista um nome_\n");
 	printf("4.sair um nome_\n");
 	do {
-		printf("\ndigite sua escola");
+		printf("\n Faça sua escolha");
 		gets(s);
 		c=atoi(s);		
 	} while(c<0||c>4);
@@ -70,10 +70,10 @@ void enter(void){
 		return;
 		
 	}
-	printf("digite o nome: ");
+	printf("digite o nome_: ");
 	gets(addr_info[slot].name);
 	
-	/*printf("digite a rua_");
+	printf("digite a rua_");
 	gets(addr_info[slot].street);
 	
 	printf("digite a cidade_");
@@ -84,7 +84,8 @@ void enter(void){
 	
 	printf("digite o cep:");
 	gets(s);
-	addr_info[slot].zip=strtoul(s,'\0',10);*/
+	addr_info[slot].zip=strtoul(s,'\0',10);
+	
 	
 }
 
@@ -118,7 +119,7 @@ void list(void){
 			printf("Rua_%s\n",addr_info[t].street);
 			printf("Cidade_%s\n",addr_info[t].city);
 			printf("Estado_%s\n",addr_info[t].state);
-			printf("CEP_%s\n", addr_info[t].zip);
+			printf("CEP_%lu\n", addr_info[t].zip);
 		}
 	}
 }
