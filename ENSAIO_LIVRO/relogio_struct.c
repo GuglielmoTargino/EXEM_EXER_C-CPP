@@ -1,5 +1,5 @@
 #include<stdio.h>
-#define DELAY 128000
+#define DELAY 1280000000
 
 struct my_time{
 	int hours;
@@ -15,8 +15,8 @@ void main (void){
                            //e por isso recebe seus elementos.
 	
 	systime.hours=0;
-	systime.minutes;
-	systime.seconds;
+	systime.minutes=0;
+	systime.seconds=0;
 	for(; ; ){
 		update(&systime);
 		display(&systime);
@@ -43,9 +43,9 @@ void display(struct my_time *t){
 	printf("%02d\n", t->seconds);
 }
 void delay(void){
-	long int t;
+	long int y;
 	// mude isso como preferir
-	for(t=1;t<DELAY;++t);
+	for(y=1;y<DELAY;++y);
 }
 
 
