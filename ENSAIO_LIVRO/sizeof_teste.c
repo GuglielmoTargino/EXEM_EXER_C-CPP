@@ -1,4 +1,4 @@
-#include <stdio.h1>
+#include <stdio.h>
 	struct u{
 		char i;
 		int g;
@@ -7,8 +7,9 @@
 void main(void){
 
 	struct u ght;
-	printf("%c",sizeof(ght.i));
-	printf("%d",sizeof(ght.g));
-	printf("%f",sizeof(ght.f));
+	printf("%d\n",sizeof(ght.i));
+	printf("%d\n",sizeof(ght.g));
+	printf("%d\n",sizeof(ght.f));// resultado é em byte.
+	printf("%d",sizeof(ght));
 	
 }
