@@ -11,6 +11,9 @@ void main(void){
 		exit(1);
 	}
 	do{printf("digite uma string (CR para sair):\n");
+	
+	gets(str);
+	strcat(str,"\n");
 	fputs(str,fp);
 	
 	}while(*str!='\n');
