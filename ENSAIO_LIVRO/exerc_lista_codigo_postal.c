@@ -11,7 +11,7 @@ Versão:v0
 #include <ctype.h>
 #include <string.h>
 
-#define SIZE 100
+#define SIZE 3
 
 struct list_type{
 	char name[40];
@@ -99,6 +99,8 @@ void display(void){
 	}
 
 }
+
+
 //salva a lista
 
 void save(void){
@@ -115,6 +117,26 @@ void save(void){
 		  printf("erro de escrita\n");
     fclose(fp);
     
+}
+
+//carrega arquivo
+
+void load(void){
+	
+	FILE *fp;
+	int i;
+	if((fp=fopen("maillist","rb"))==NULL){
+		printf("arquivo não pode ser aberto\n");
+		return;
+		
+	}
+	init_list();
+	for(i=0;i<SIZE;i++)
+	  if(fread(&list[i],sizeof(struct list_type),1,fp)!=1){
+	  	if(feof(fp)) break;
+	  	printf("erro de leitura no arquivo\n");
+	  }
+	  fclose(fp);
 }
 
 // pega uma seleção
