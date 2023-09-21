@@ -11,7 +11,7 @@ Versão:v0
 #include <ctype.h>
 #include <string.h>
 
-#define SIZE 3
+#define SIZE 100
 
 struct list_type{
 	char name[40];
@@ -34,15 +34,15 @@ void main(void){
 	for(;;){
 		choice=menu();
 		switch(choice){
-			case'e':  enter();
+			case'i':  enter();
 			break;
-			case 'd': display();
+			case 'v': display();
 			break;
 			case 's': save();
 			break;
 			case 'l': load();
 			break;
-			case 'q': exit(0);
+			case 't': exit(0);
 			
 		}
 	}
@@ -144,12 +144,13 @@ menu(void){
 	char s[80];
 	
 	do{
-		printf("(i) inserir");
-		printf("(v) visualizar");
-		printf("(c) carregar");
-		printf("(s) salvar");
-		printf("(t) terminar");
-		printf("escolhar");
+        printf("escolhar_\n");
+		printf("(i) inserir\n");
+		printf("(v) visualizar\n");
+		printf("(c) carregar\n");
+		printf("(s) salvar\n");
+		printf("(t) terminar\n");
+	
 		gets(s);		
 		
 	}while (!strchr("ivcst", tolower(*s)));
