@@ -71,13 +71,13 @@ void enter(void){
 	printf("rua:");
 	gets (list[i].street);
 	
-	printf("cidade");
+	printf("cidade:");
 	gets (list[i].city);
 	
-	printf("estado");
+	printf("estado:");
 	gets(list[i].state);
 	
-	printf("cep");
+	printf("cep:");
 	gets(list[i].zip);
 	
 }
@@ -145,11 +145,11 @@ menu(void){
 	
 	do{
         printf("escolhar_\n");
-		printf("(i) inserir\n");
-		printf("(v) visualizar\n");
-		printf("(c) carregar\n");
-		printf("(s) salvar\n");
-		printf("(t) terminar\n");
+		printf("(i) inserir:\n");
+		printf("(v) visualizar:\n");
+		printf("(c) carregar:\n");
+		printf("(s) salvar:\n");
+		printf("(t) terminar:\n");
 	
 		gets(s);		
 		
