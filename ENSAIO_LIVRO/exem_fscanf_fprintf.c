@@ -20,17 +20,17 @@ void main(void){
 		
 	}
 	printf("digite uma string e um numero");
-	fscanf(stdin,"%s%d,s,&t");
+	fscanf(stdin,"%s%d",s,&t); // lê o teclado
 	
-	fprintf(fp, "%s%d",s,t);
+	fprintf(fp, "%s%d",s,t); //escreve no arquivo
 	fclose(fp);
 	
 	if((fp=fopen("test","r"))==NULL){
 		printf("o arquivo não abre");
 		exit(1);
 	}
-	fscanf(fp,"%s%d",s,&t);
-	fprintf(stdout,"%s%d",s,t);
+	fscanf(fp,"%s%d",s,&t); // lê do arquivo
+	fprintf(stdout,"%s%d",s,t); //imprime na tela
 	
 	
 }
