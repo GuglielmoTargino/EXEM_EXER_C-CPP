@@ -12,14 +12,14 @@ VERSAO:V0
 #include <stdlib.h>
 #include <io.h>
 #include <string.h>
-#include <fnct1.h>
+//#include <fnct1.h>
 
 #define BUF_SIZE 128
 
 void input(char *buf,int fd1);
 void display(char *buf,int fd2);
 void main(void){
-	char buf(BUF_SIZE);
+	char buf[BUF_SIZE];
 	int fd1, fd2;
 	
 	if((fd1=open("test",o_wronly))==1){//abre para escrita
@@ -31,7 +31,7 @@ void main(void){
 	//fecha o arquivo e le de volta
 	close(fd1);
 	
-	if((fd2=open("test",o_wronly))==-1){//abre para leitura
+	if((fd2=open("test",o_rdonly))==-1){//abre para leitura
 	printf("o arquivo nao abre\n");
 	exit(1);
 	
@@ -44,7 +44,7 @@ void main(void){
 void input(char *buf, int fd1){
 	int t;
 	do{
-		for(t=0;t<BUF_SIZE;t++;t++)buf[t]='\0';
+		for(t=0;t<BUF_SIZE;t++)buf[t]='\0';
 		gets(buf);//le teclado
 		if(write(fd1,buf,BUF_SIZE)!=BUF_SIZE){
 			printf("erro de escrita\n");
