@@ -8,12 +8,13 @@
 
 
 #include "stdio.h"
-#define TED 10
+//#define TED 10
+//#define RALPH 5
 void main(void){
 	#ifdef TED
- 	  printf("TED legal")
+ 	  printf("TED legal\n");
 	#else
-	  printf("Diz aí");
+	  printf("Diz aí\n");
 	#endif
 	
 	#ifndef RALPH
