@@ -1,7 +1,16 @@
+/*
+Programa cria como exercício a partir do livro c-completo.
+Tem como objetivo mostrar o conteúdo de um arquivo texto qualquer.
+
+Editor/Aluno: Guglielmo Henriques Targino.
+Data: 20/10/23
+Versão: V0
+
+*/
 #include<stdio.h>
 #include <stdlib.h>
 
-void main (int argc, char *argv){
+void main (int argc, char *argv[]){
 	
 	FILE *fp;
 	char ch;
