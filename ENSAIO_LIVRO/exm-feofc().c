@@ -3,14 +3,18 @@
 
 void main (int argc, char *argv[]){
 	
-	file *fp;
-	char ch;
+	FILE *fp;
+	char ch, BOF;
+	BOF=' ';
 	
-	if((fp=fopen(argv[1],"r")==null){
+	if((fp=fopen(argv[1],"r"))==NULL){
 		
-		
+		printf("o arquivo não existe");
+		exit(1);
 		
 	}
-	exit(1);
-	
+	while((ch=fgetc(fp))!=BOF){
+		printf("%c",ch);
+	}
+	fclose(fp);
 }
