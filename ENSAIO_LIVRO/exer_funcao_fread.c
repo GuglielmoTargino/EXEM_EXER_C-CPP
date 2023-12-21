@@ -13,7 +13,10 @@ void main (void){
 		printf("O arquivo não abre");
 		exit(1);
 	}
-	if
-	
+	if(fread(bal,sizeof(float),10,fp)!=10){
+		if(feof(fp)) printf("fim de arquivo prematuro");
+		else printf("erro na leitura");
+	}
+	fclose(fp);
 	
 }
