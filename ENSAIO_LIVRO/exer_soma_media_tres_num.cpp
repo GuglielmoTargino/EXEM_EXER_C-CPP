@@ -7,13 +7,14 @@ versão: v0
 
 
 #include <iostream>
-#include<iomanip> //definição necessária para usar as funções setw e setf.
+#include <iomanip> //definição necessária para usar as funções setw e setf.
 #include <locale> //definição para caracteres acentuados
 
 using namespace std;
 int main(){
-	std::locale::global(std::locale("")); //configura locale de acentuação
-	std::wcout.imbue(std::locale());		//configura a saida do locale
+	//std::locale::global(std::locale("")); //configura locale de acentuação
+	//std::wcout.imbue(std::locale());		//configura a saida do locale
+	setLocale(LC_ALL,"portuguese");
 	
 	
 	float soma,prod,media,n1,n2,n3;
@@ -30,7 +31,7 @@ int main(){
 	
 //setw(8) fixa tamanho da representação até 8 digitos
 	
-	std::wcout <<"multiplicação é_"<<(unsigned)prod<<endl;
+	cout <<"multiplicação é_"<<(unsigned)prod<<endl;
 	cout<<"media é_"<<media<<setw(8)<<endl;
 	
 	
