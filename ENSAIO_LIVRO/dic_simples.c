@@ -8,13 +8,13 @@ char *dic[][40]={
 "atlas","um livro de mapas","carro",
 "veiculo motorizado","telefone",
 "um dispositivo de comunicação","aviao","uma maquina voadora",
-"",""/*nulo termona a lista*/};
+"",""/*nulo termina a lista*/};
 
 void main(void){
 	char word[80],ch;
 	char **p;
 	do{
-		puts("\ndigite uma palavra_");
+		puts("\ndigite uma palavra para saber seu significado_");
 		gets(word);
 		p=(char**)dic;
 		//acha a palavra no dicionario
@@ -31,5 +31,5 @@ void main(void){
 		if(!*p)puts ("a palavra não está no dicionario");
 		printf("outra palavra? S/N");
 		ch=getche();
-	}while(toupper((ch)!='N'));
+	}while(toupper((ch)=='N'));
 }
