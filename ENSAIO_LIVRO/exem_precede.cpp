@@ -16,7 +16,7 @@ int main(){
 	
 	int n1,n2;
 	int qdado;
-	cout<<"digite dois numeros";
+	cout<<"digite dois números_"<<endl;
 	cin>>n1>>n2;
 	qdado=n1*n2+2;
 	
