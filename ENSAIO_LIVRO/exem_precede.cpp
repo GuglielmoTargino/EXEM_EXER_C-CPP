@@ -15,7 +15,10 @@ int main(){
 	setlocale(LC_ALL,"Portuguese");
 	
 	int n1,n2;
-	int qdado=n1*n2+2;
+	int qdado;
+	cout<<"digite dois numeros";
+	cin>>n1>>n2;
+	qdado=n1*n2+2;
 	
 	cout<<" o quadrado de n é_"<<qdado<<endl;
 	
