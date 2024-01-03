@@ -17,8 +17,5 @@ void main(void){
 	
 	printf(" a palavra é_ %c %s %d",'a', "b",c);
 	
-	
-	
-	
-	
 }
+	
