@@ -12,10 +12,10 @@ void main(void){
 	setlocale(LC_ALL,"Portuguese");
 	
 	char a='g';
-	char b'ght';
+	char b[3]="ght";
 	int c=4;
 	
-	printf(" a palavra é_")
+	printf(" a palavra é_ %c %s %d",'a', "b",c);
 	
 	
 	
