@@ -11,6 +11,10 @@ Versão: v0
 
 using namespace std;
 int main(void){
+	int g=0;
 	
-	
+	while(g<10){
+		cout<<"g_"<<g<<endl;
+		g++;
+	}
 }
