@@ -15,15 +15,15 @@ int main(void){
 	cout<<endl;
 	linha=1;
 	
-	while (linha<8){
+	while (linha<80){
 		cout<<"\t";
 		coluna=1;
 		while (coluna<linha){
 			cout<<"*";
-		coluna=coluna+1;
+		coluna++;
 		}
 		cout<<endl;
-	linha=linha+1;
+	linha++;
 	}
 	
 }
