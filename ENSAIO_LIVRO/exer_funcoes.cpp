@@ -8,7 +8,7 @@ Versão:v0.
 
 */
 
-#include <iostrem>
+#include <iostream>
 #include <locale>
 
 
@@ -19,10 +19,13 @@ void cumprimentar(char inic, char inic2){
 	
 }
 
-void main(void){
-	
+int main(void){
 	
 	setlocale(LC_ALL,"Portuguese");
+	char primeiro,segundo;
+	cout<<"digite duas iniciais";
+	cin>>primeiro>>segundo;
+	cumprimentar(primeiro,segundo);
 	
 	
 	
