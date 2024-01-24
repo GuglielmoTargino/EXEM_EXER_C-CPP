@@ -12,7 +12,7 @@ Versão: v0.
 #include <iostream>
 #include <locale>
 
-using namespace sts;
+using namespace std;
 
 int pegavalor(void){
 	int valor;
