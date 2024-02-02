@@ -20,6 +20,9 @@ void main (void){
 	
 	for(i=0;i<4;i++){
 		c=getch();
+		aluno[i][0]=c;
+		g=aluno[i][0];
+		
 		printf("o numero é %d ",c);
 		
 	}
