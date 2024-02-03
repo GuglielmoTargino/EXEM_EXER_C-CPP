@@ -7,7 +7,8 @@ Aluno: Guglielmo Targino.
 Data: 02fev24.
 versão: v0.
 */
-
+#include <stdlib.h>
+#include <stdio.h>
 #include <graph.h>
 #include <conio.h>
 
