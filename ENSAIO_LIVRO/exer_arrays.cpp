@@ -16,7 +16,7 @@ Versão: v0.
 using namespace std;
 
 	//função para trocar valor arrays
-	void trocaR_v(int ver[]){
+	void trocaR_v(int vet[]){
 		vet[0]=60;
 		vet[1]=70;
 		vet[2]=80;
