@@ -35,6 +35,9 @@ using namespace std;
 int main(){
 	
 	int v[]={30,40,50};
+	char gh[2][3][2];
+	gh[0][0][2]='Guga';
+	
 	
 	trocaR(v[0]);
 	
@@ -42,6 +45,7 @@ int main(){
 	
 	trocaR_v(v);
 	cout<<"v[0]"<<v[0]<<"v[1]"<<v[1]<<"v[2"<<v[2]<<endl;
+	cout<<" vetor gh[0][0[ é "<<gh[0][0][2];
 	
 
 	
