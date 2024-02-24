@@ -16,7 +16,7 @@ void main(void){
 /* acrescenta espaços aqui*/
 void pad(char *s, int length){/* <*s> recebe str,  e <length> recebe 40*/
 	int l;
-	l=strlen(s); /* acha o comprimrnto aqui e coloca em i*/
+	l=strlen(s); /* acha o comprimrnto aqui e coloca em i o valor */
 
 	while(l<length){
 		s[l]='g'; /* insere espaço, nesse caso g*/
