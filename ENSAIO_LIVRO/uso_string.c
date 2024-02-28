@@ -1,3 +1,16 @@
+/*
+
+Exercício com manipulação de string
+
+Aluno: Guglielmo Targino
+Data:28fev24
+
+versão: v2
+
+
+
+*/
+
 #include<stdio.h>
 #include<string.h>
 void main(void){
