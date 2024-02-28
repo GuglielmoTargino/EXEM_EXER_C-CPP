@@ -11,14 +11,29 @@ versão: v2
 
 #include<stdio.h>
 #include<string.h>
+#include <locale.h>
 
 
 void main(void){
-	char s1[20],s2[20];
+	
+	setlocale(LC_ALL,"Portuguese");
+	char s1[20];
+	char caractere='0';
+	int i;
 	printf("digite uma string\n");
-	gets(s1);
-	printf("digite outra string\n");
-	gets(s2);
-	printf("comprimento de s1=%d, comprimento s2=%d\n",strlen(s1),strlen(s2));
-		
+	strcpy(s1,"guga");
+	
+	
+	//gets(s1);
+	
+	printf("Comprimento de s1=%d é \n",strlen(s1));
+	
+	
+	    i=0;
+	while(caractere!=NULL)	{
+	    
+		printf("Caractere %d é %c \n",i,s1[i]);
+		caractere=s1[i];
+		i++;
+	}
 }
