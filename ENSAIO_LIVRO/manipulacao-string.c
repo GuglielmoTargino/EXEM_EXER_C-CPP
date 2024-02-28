@@ -17,22 +17,23 @@ versão: v2
 void main(void){
 	
 	setlocale(LC_ALL,"Portuguese");
-	char s1[20];
+	char s1[200];
 	char caractere='0';
 	int i;
 	printf("digite uma string\n");
-	strcpy(s1,"guga");
 	
 	
-	//gets(s1);
 	
-	printf("Comprimento de s1=%d é \n",strlen(s1));
+	gets(s1);
+	
+	printf("%s tem %d caracteres que são \n",s1,strlen(s1));
 	
 	
 	    i=0;
 	while(caractere!=NULL)	{
 	    
 		printf("Caractere %d é %c \n",i,s1[i]);
+		
 		caractere=s1[i];
 		i++;
 	}
