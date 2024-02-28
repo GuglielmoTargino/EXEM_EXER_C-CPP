@@ -21,7 +21,10 @@ void main(void){
 	char caractere='0';
 	int i;
 	printf("digite uma string\n");
-	
+	/*
+	//scanf("%s",&s1); scanf só registra até a digitação do primeiro 
+	espaço
+	*/
 	
 	
 	gets(s1);
