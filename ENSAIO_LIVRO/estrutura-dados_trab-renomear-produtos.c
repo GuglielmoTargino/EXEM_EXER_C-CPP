@@ -28,13 +28,19 @@ Versão:v0.
   	bool achouCaro;
 } Item;
 
-  //Variáveis para nomes de itens
+
+  //Variáveis para nomes de itens a cadastrar.  
+  char a[20]="pao"; 	//produto 1
+  char b[20]="sapato"; 	//produto 2
+  char c[20]="prato";	//produto 3
+  char d[20]="ovo";		//produto 4
+  char e[20]="sabao";	//produto 5
   
-  char a[20]="pao";
-  char b[20]="sapato";
-  char c[20]="prato";
-  char d[20]="ovo";
-  char e[20]="sabao";
+  /* Seletor de visualização do item; 
+  Exemplo 1=a, 2=b 3=c, 4=d e 5=e  
+  */
+  short ref=5;
+  
 
  void cadastrarItem(Item *item, int codigo, const char *descricao,
  float valorTotal, int quantidadeItens, bool achouCaro) {
@@ -44,13 +50,13 @@ Versão:v0.
   	strcpy(item->descricao, descricao);
   	item->valorTotal = valorTotal;
   	item->quantidadeItens = quantidadeItens;
-  	item->achouCaro=achouCaro;
-  	
+  	item->achouCaro=achouCaro;  	
   	contador++;
 }
 
  	//Função para visualização dos itens cadastrados.
  void visualizarItem(const Item *item){
+ 	
  	printf(" Codigo item: %d\n",item->codigo);
  	printf(" Nome do item: %s\n",item->descricao);
  	printf(" Valor do item: %.2f\n",item->valorTotal);
@@ -75,7 +81,7 @@ Versão:v0.
   	printf("Quantidade de itens cadastrados: %d\n", contador);
   	
   	//Chama a função para visualizar os itens cadastrados
-	visualizarItem(&itens[1]);
+	visualizarItem(&itens[ref=ref-1]);
 	
 
   return 0;
