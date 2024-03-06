@@ -4,7 +4,7 @@ O objetivo deste trabalho é implementar as funções
 de excluir, alterar e renomear os itens já propostos.
 
 Aluno: Guglielmo Targino.
-Data:29fev24
+Data:06mar24
 Versão:v0.
 
 */
@@ -81,14 +81,11 @@ Versão:v0.
   	strcpy(item->descricao, descricao);  
 }
 
- 	// Função para se alterar apenas o preço do item.
+ 	// Função para alterar apenas o preço do item.
  void alterarPrecoItem(Item *item, float valorTotal) {		
 	
   	item->valorTotal = valorTotal; 
 }
-
-
-
 
  int main(void) {
  	
@@ -98,30 +95,34 @@ Versão:v0.
   	cadastrarItem(&itens[indiceItem++], 2, "Detergente", 11.59, 3, sim);
   	cadastrarItem(&itens[indiceItem++], 3, "Ovo", 3.96, 5, nao);
  	cadastrarItem(&itens[indiceItem++], 4, "Farinha", 2.99, 5, nao);
- 	cadastrarItem(&itens[indiceItem++], 5, "Leite", 8.79, 2, sim);
-	
+ 	cadastrarItem(&itens[indiceItem++], 5, "Leite", 8.79, 2, sim);	
 	
   	
   	//Chama a função para visualizar os itens cadastrados
-	///////visualizarItem(&itens[0]);
+	visualizarItem(&itens[0]);
 	
 	//Chama a função apagar itens passando valores zero.
-	////////apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
+	apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
 	
 	//Chama a função para visualizar os itens cadastrados
-	//visualizarItem(&itens[0]);
+	visualizarItem(&itens[0]);
 	
 	//Chama a função alterar itens passando novos valores .
-	//alterarItem(&itens[0], 30, "Novo Item",45.56, 8, sim);
+	alterarItem(&itens[0], 30, "Novo Item",45.56, 8, sim);
 	
-		//Chama a função para visualizar os itens cadastrados
+	//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
 	
 	//Chama a função alterar nome do item passando novo valor.
 	alterarNomeItem(&itens[0],"Feijao");
 	
+	//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
+	
+	//Chama função para alterar apenas o preço do item
 	alterarPrecoItem(&itens[0],30.56);
+	
+	//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
 	
   return 0;
