@@ -28,18 +28,6 @@ Versão:v0.
   	bool achouCaro;
 } Item;
 
-
-  //Variáveis para renomear itens a cadastrar.  
-  char a[20]="pao"; 	//produto 1
-  char b[20]="sapato"; 	//produto 2
-  char c[20]="prato";	//produto 3
-  char d[20]="ovo";		//produto 4
-  char e[20]="sabao";	//produto 5
-  
-  /* Seletor de visualização do item; 
-  Exemplo 1=a, 2=b 3=c, 4=d e 5=e  
-  */
-  short ref=5;
   
 
  void cadastrarItem(Item *item, int codigo, const char *descricao,
@@ -64,15 +52,29 @@ Versão:v0.
  	printf(" Gostou do preco do item?: %s\n",item->achouCaro?"Sim":"Não");
  	printf("\n");
  }
+ 
+ void apagarItem(Item *item, int codigo, const char *descricao,
+ float valorTotal, int quantidadeItens, bool achouCaro) {
+	
+	
+	item->codigo = codigo;
+  	strcpy(item->descricao, descricao);
+  	item->valorTotal = valorTotal;
+  	item->quantidadeItens = quantidadeItens;
+  	item->achouCaro=achouCaro;  	
+
+}
+
 
  int main(void) {
+ 	
   	Item itens[MAX_ITENS];
   	short int indiceItem = 0;
-	cadastrarItem(&itens[indiceItem++], 1, a, 25.86, 1, sim);
-  	cadastrarItem(&itens[indiceItem++], 2, b, 11.59, 3, sim);
-  	cadastrarItem(&itens[indiceItem++], 3, c, 3.96, 5, nao);
- 	cadastrarItem(&itens[indiceItem++], 4, d, 2.99, 5, nao);
- 	cadastrarItem(&itens[indiceItem++], 5, e, 8.79, 2, sim);
+	cadastrarItem(&itens[indiceItem++], 1, "Pao", 25.86, 1, sim);
+  	cadastrarItem(&itens[indiceItem++], 2, "Feijao", 11.59, 3, sim);
+  	cadastrarItem(&itens[indiceItem++], 3, "Ovo", 3.96, 5, nao);
+ 	cadastrarItem(&itens[indiceItem++], 4, "Farinha", 2.99, 5, nao);
+ 	cadastrarItem(&itens[indiceItem++], 5, "Leite", 8.79, 2, sim);
 	
 	//linha de comando fase alfaV0
 	//cadastrarItem(&itens[indiceItem++], 5, "Farinha de Trigo", 8.79, 2, sim);
@@ -82,7 +84,8 @@ Versão:v0.
   	
   	//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
+	apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
+	visualizarItem(&itens[0]);
 	
-
   return 0;
 }
