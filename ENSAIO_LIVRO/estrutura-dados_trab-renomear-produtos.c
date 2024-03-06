@@ -52,10 +52,21 @@ Versão:v0.
  	printf(" Gostou do preco do item?: %s\n",item->achouCaro?"Sim":"Não");
  	printf("\n");
  }
- 
+  	// Função para apagar itens.
  void apagarItem(Item *item, int codigo, const char *descricao,
- float valorTotal, int quantidadeItens, bool achouCaro) {
+ float valorTotal, int quantidadeItens, bool achouCaro) {	
 	
+	item->codigo = codigo;
+  	strcpy(item->descricao, descricao);
+  	item->valorTotal = valorTotal;
+  	item->quantidadeItens = quantidadeItens;
+  	item->achouCaro=achouCaro;  	
+
+}
+
+  	// Função para alterar itens.
+ void alterarItem(Item *item, int codigo, const char *descricao,
+ float valorTotal, int quantidadeItens, bool achouCaro) {	
 	
 	item->codigo = codigo;
   	strcpy(item->descricao, descricao);
@@ -76,15 +87,20 @@ Versão:v0.
  	cadastrarItem(&itens[indiceItem++], 4, "Farinha", 2.99, 5, nao);
  	cadastrarItem(&itens[indiceItem++], 5, "Leite", 8.79, 2, sim);
 	
-	//linha de comando fase alfaV0
-	//cadastrarItem(&itens[indiceItem++], 5, "Farinha de Trigo", 8.79, 2, sim);
-
-
-  	//printf("Quantidade de itens cadastrados: %d\n", contador);
+	
   	
   	//Chama a função para visualizar os itens cadastrados
+	///////visualizarItem(&itens[0]);
+	
+	//Chama a função apagar itens passando valores zero.
+	////////apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
+	
+	//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
-	apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
+	
+	//Chama a função alterar itens passando novos valores .
+	alterarItem(&itens[0], 30, "Novo Item",45.56, 8, sim);
+		//Chama a função para visualizar os itens cadastrados
 	visualizarItem(&itens[0]);
 	
   return 0;
