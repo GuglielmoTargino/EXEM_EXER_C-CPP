@@ -29,7 +29,7 @@ Versão:v0.
 } Item;
 
 
-  //Variáveis para nomes de itens a cadastrar.  
+  //Variáveis para renomear itens a cadastrar.  
   char a[20]="pao"; 	//produto 1
   char b[20]="sapato"; 	//produto 2
   char c[20]="prato";	//produto 3
@@ -78,10 +78,10 @@ Versão:v0.
 	//cadastrarItem(&itens[indiceItem++], 5, "Farinha de Trigo", 8.79, 2, sim);
 
 
-  	printf("Quantidade de itens cadastrados: %d\n", contador);
+  	//printf("Quantidade de itens cadastrados: %d\n", contador);
   	
   	//Chama a função para visualizar os itens cadastrados
-	visualizarItem(&itens[ref=ref-1]);
+	visualizarItem(&itens[0]);
 	
 
   return 0;
