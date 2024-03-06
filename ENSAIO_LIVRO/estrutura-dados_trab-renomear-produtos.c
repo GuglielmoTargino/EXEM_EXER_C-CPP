@@ -31,8 +31,7 @@ Versão:v0.
   
 
  void cadastrarItem(Item *item, int codigo, const char *descricao,
- float valorTotal, int quantidadeItens, bool achouCaro) {
-	
+ float valorTotal, int quantidadeItens, bool achouCaro) {	
 	
 	item->codigo = codigo;
   	strcpy(item->descricao, descricao);
@@ -52,6 +51,7 @@ Versão:v0.
  	printf(" Gostou do preco do item?: %s\n",item->achouCaro?"Sim":"Não");
  	printf("\n");
  }
+ 
   	// Função para apagar itens.
  void apagarItem(Item *item, int codigo, const char *descricao,
  float valorTotal, int quantidadeItens, bool achouCaro) {	
@@ -75,14 +75,27 @@ Versão:v0.
   	item->achouCaro=achouCaro;  	
 
 }
+ 	// Função para se alterar apenas o nome do item.
+ void alterarNomeItem(Item *item, const char *descricao) {		
+	
+  	strcpy(item->descricao, descricao);  
+}
+
+ 	// Função para se alterar apenas o preço do item.
+ void alterarPrecoItem(Item *item, float valorTotal) {		
+	
+  	item->valorTotal = valorTotal; 
+}
+
+
 
 
  int main(void) {
  	
   	Item itens[MAX_ITENS];
   	short int indiceItem = 0;
-	cadastrarItem(&itens[indiceItem++], 1, "Pao", 25.86, 1, sim);
-  	cadastrarItem(&itens[indiceItem++], 2, "Feijao", 11.59, 3, sim);
+	cadastrarItem(&itens[indiceItem++], 1, "Arroz", 25.86, 1, sim);
+  	cadastrarItem(&itens[indiceItem++], 2, "Detergente", 11.59, 3, sim);
   	cadastrarItem(&itens[indiceItem++], 3, "Ovo", 3.96, 5, nao);
  	cadastrarItem(&itens[indiceItem++], 4, "Farinha", 2.99, 5, nao);
  	cadastrarItem(&itens[indiceItem++], 5, "Leite", 8.79, 2, sim);
@@ -96,11 +109,19 @@ Versão:v0.
 	////////apagarItem(&itens[0], 0, "Produto nao Cadastrado",0, 0, nao);
 	
 	//Chama a função para visualizar os itens cadastrados
-	visualizarItem(&itens[0]);
+	//visualizarItem(&itens[0]);
 	
 	//Chama a função alterar itens passando novos valores .
-	alterarItem(&itens[0], 30, "Novo Item",45.56, 8, sim);
+	//alterarItem(&itens[0], 30, "Novo Item",45.56, 8, sim);
+	
 		//Chama a função para visualizar os itens cadastrados
+	visualizarItem(&itens[0]);
+	
+	//Chama a função alterar nome do item passando novo valor.
+	alterarNomeItem(&itens[0],"Feijao");
+	
+	visualizarItem(&itens[0]);
+	alterarPrecoItem(&itens[0],30.56);
 	visualizarItem(&itens[0]);
 	
   return 0;
