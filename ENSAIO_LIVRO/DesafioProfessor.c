@@ -12,10 +12,12 @@ versão: v0
 #include<stdio.h>
 #include<string.h>
 #include <locale.h>
+#include <ctype.h>
+
 void main(void){
 	
 	setlocale(LC_ALL,"Portuguese");
-	char s1[100];
+	char s1[100],s2[100];
 	int i,cx;
 	
 	printf("digite uma string\n");
@@ -23,13 +25,31 @@ void main(void){
 	cx=strlen(s1);
 	
 	for(i=0;i<cx;i++){
-		printf("comprimento de s1 é =%c\n",s1[i]);
+		s2[i]=tolower(s1[i]);
+		
+		
+		switch(s2[i]){
+		
+		case 'a':
+			printf(" a Vale 1\n ");
+			break;
+		case 'g':
+			printf("g Vale 10\n");
+			break;
+		case 'u':
+			printf("u vale Vale 8\n");
+			break;
+		default:
+			printf("escolha invalida\n");
+	}
 		
 	}
 	
 	
 	
 	/*
+	
+	printf("comprimento de s1 é =%c\n",s1[i]); imprime só um caractere
 	printf("digite outra string\n");
 	gets(s2);
 	printf("comprimento de s1=%d, comprimento s2=%d\n",strlen(s1),strlen(s2));
