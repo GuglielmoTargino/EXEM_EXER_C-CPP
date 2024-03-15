@@ -1,6 +1,6 @@
 /*
 
-Exercício resolução Sesafio Professor
+Exercício resolução Sesafio Numerologia Professor
 
 Aluno: Guglielmo Targino
 Data:15mar24
@@ -18,10 +18,18 @@ void main(void){
 	
 	setlocale(LC_ALL,"Portuguese");
 	char s1[100],s2[100];
-	int i,cx,delta;
+	int i,cx,delta,ce,de,un,uni,dec,code,resu;
 	delta=0;
 	
-	printf("digite uma string\n");
+	printf("=============================================\n");
+	printf("PROGRAMA DESENVOLVIDO POR GUGLIELMO TARGINO.\n");
+	printf("ALUNO DO CURSO DE CIÊNCIA DA COMPUTAÇÃO\n");
+	printf("UNIVERSIDADE NOVE DE JULHO-UNINOVE\n");
+	printf("=============================================\n");
+	printf("SAIBA SEU NÚMERO DA SORTE- TÉCNICA EGÍPSIA\n");
+	printf("=============================================\n");
+	
+	printf("Digite seu nome_\n");
 	gets(s1);
 	cx=strlen(s1);
 	
@@ -141,27 +149,35 @@ void main(void){
 			delta+=8;
 			break;
 		default:
-			printf("Não vale digitar numeros ou simbolos_)");
+			printf("Não digitar números ou simbolos_\n");
+			i=cx;
+			delta=0;
 	}
 	
 	}
 	
+		ce=delta/100;	
+		de=(delta%100)/10;
+			
+		un=delta%10;
+		code=un+de+ce;
+		dec=code/10;
+		uni=code%10;
+		resu=dec+uni;
+		
+		if(resu==11 || resu==22){
+			printf(" Seu número mestre da sorte é: %d",resu);
+		}
+		
+	printf("Resultado para cáculo: %d\n ",delta);
+	/*printf(" CE é %d\n ",ce);
+	printf(" DE é %d\n ",de);
+	printf(" UN é %d\n ",un);
+	printf(" CODE é %d\n ",code);*/
+	printf("Seu número da sorte é:%d\n ",resu);	
 	
 	
-	/*
+	}
 	
-	printf("comprimento de s1 é =%c\n",s1[i]); imprime só um caractere
-	printf("digite outra string\n");
-	gets(s2);
-	printf("comprimento de s1=%d, comprimento s2=%d\n",strlen(s1),strlen(s2));
-	if(!strcmp(s1,s2)) printf("as strings são iguais");
-	strcat(s1,s2);
-	printf("%s\n",s1);
-	printf("%s\n",s2);
-	strcpy(s1,"isso é um teste de s1.\n");
-	printf(s1);
-	if(strchr("alo",'m')) printf("o está em alo\n");
-	if(strstr("olá aqui","olá")) printf("ola encontrado em olá aqui");	
-	*/
-	printf(" A soma é %d\n ",delta);
-}
+	
+
