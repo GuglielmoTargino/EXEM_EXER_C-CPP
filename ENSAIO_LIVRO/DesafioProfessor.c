@@ -18,7 +18,8 @@ void main(void){
 	
 	setlocale(LC_ALL,"Portuguese");
 	char s1[100],s2[100];
-	int i,cx;
+	int i,cx,delta;
+	delta=0;
 	
 	printf("digite uma string\n");
 	gets(s1);
@@ -29,20 +30,120 @@ void main(void){
 		
 		
 		switch(s2[i]){
+		case ' ':			
+			
+			break;
 		
 		case 'a':
-			printf(" a Vale 1\n ");
+		
+			delta+=1;
+			break;			
+		case 'b':
+			
+			delta+=2;
+			break;
+	
+		case 'c':
+			
+			delta+=3;
+			break;
+		case 'd':
+			
+			delta+=4;
+			break;
+			
+		case 'e':
+			
+			delta+=5;			
+			break;
+			
+		case 'f':
+			
+			delta+=6;
 			break;
 		case 'g':
-			printf("g Vale 10\n");
+			
+			delta+=7;
+			break;
+		case 'h':
+			
+			delta+=8;
+			break;
+		case 'i':
+			
+			delta+=9;
+			break;
+		case 'j':
+			
+			delta+=1;
+			break;
+		case 'k':
+			
+			delta+=2;
+			break;
+		case 'l':
+			
+			delta+=3;
+			break;
+		case 'm':
+			
+			delta+=4;
+			break;
+		case 'n':
+			
+			delta+=5;
+			break;
+		case 'o':
+			
+			delta+=6;
+			break;
+		case 'p':
+			
+			delta+=7;
+			break;
+		case 'q':
+			
+			delta+=8;
+			break;
+		case 'r':
+			
+			delta+=9;
+			break;
+		case 's':
+			
+			delta+=1;
+			break;
+		case 't':
+			
+			delta+=2;
 			break;
 		case 'u':
-			printf("u vale Vale 8\n");
+			
+			delta+=3;
+			break;
+		case 'v':
+			
+			delta+=4;
+			break;
+		case 'w':
+		
+			delta+=5;
+			break;
+		case 'x':
+			
+			delta+=6;
+			break;
+		case 'y':
+			
+			delta+=7;
+			break;
+		case 'z':			
+			delta+=8;
 			break;
 		default:
-			printf("escolha invalida\n");
+			printf("Não vale digitar numeros ou simbolos_)");
 	}
-		
+	
 	}
 	
 	
@@ -62,4 +163,5 @@ void main(void){
 	if(strchr("alo",'m')) printf("o está em alo\n");
 	if(strstr("olá aqui","olá")) printf("ola encontrado em olá aqui");	
 	*/
+	printf(" A soma é %d\n ",delta);
 }
