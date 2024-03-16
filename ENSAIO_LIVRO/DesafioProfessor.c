@@ -165,16 +165,19 @@ void main(void){
 		uni=code%10;
 		resu=dec+uni;
 		
-		if(resu==11 || resu==22){
-			printf(" Seu número mestre da sorte é %d.\n",resu);
-		}
-		
-	printf("Resultado para cáculo: %d\n ",delta);
+		if(delta==11 || delta ==22){
+			printf(" Seu número mestre da sorte é %d.\n",delta);
+		}else{
+			printf("Resultado para cáculo: %d\n ",delta);
 	/*printf(" CE é %d\n ",ce);
 	printf(" DE é %d\n ",de);
 	printf(" UN é %d\n ",un);
 	printf(" CODE é %d\n ",code);*/
-	printf("Seu número da sorte é %d.\n ",resu);	
+	printf("Seu número da sorte é %d.\n ",resu);
+			
+		}
+		
+		
 	
 	system("pause");
 	
