@@ -149,7 +149,7 @@ void main(void){
 			delta+=8;
 			break;
 		default:
-			printf("Não digitar números ou simbolos_\n");
+			printf("ERRO. Favor não digitar números ou simbolos_\n");
 			i=cx;
 			delta=0;
 	}
@@ -166,7 +166,7 @@ void main(void){
 		resu=dec+uni;
 		
 		if(resu==11 || resu==22){
-			printf(" Seu número mestre da sorte é: %d",resu);
+			printf(" Seu número mestre da sorte é %d.\n",resu);
 		}
 		
 	printf("Resultado para cáculo: %d\n ",delta);
@@ -174,7 +174,9 @@ void main(void){
 	printf(" DE é %d\n ",de);
 	printf(" UN é %d\n ",un);
 	printf(" CODE é %d\n ",code);*/
-	printf("Seu número da sorte é:%d\n ",resu);	
+	printf("Seu número da sorte é %d.\n ",resu);	
+	
+	system("pause");
 	
 	
 	}
