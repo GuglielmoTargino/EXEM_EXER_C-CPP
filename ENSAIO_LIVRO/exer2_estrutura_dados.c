@@ -146,18 +146,15 @@ void Impares(){
 	printf("A média da somatória é %0.2f\n",media);
 	
 }
-void Trocar(void){
+void Dividir(void){
+	printf("O primeiro digito do RA é 2.\n");
+	int a;
+	
+	for (a=498; a>=1; a-=2){
+		printf("Os números menores que 500 disíveis por 2 são %d\n",a);
+	}
 
-  int a=10;
-  int b=20;
-  int aux;
-  printf("a=%d, b=%d\n", a, b);
-  
-  aux = a;
-  a = b;
-  b = aux;
-
-  printf("a trocado é =%d, b trocado é =%d\n", a, b);
+ 
   
 }
 
@@ -190,7 +187,7 @@ int main(){
 	Resultado();
 	printf("\n");
 	
-	printf("========Exercicio repetição –Questão1========== \n");
+	printf("====Exercicio repetição –Questão1========== \n");
 	Somatoria();
 	printf("\n");
 	
@@ -200,6 +197,10 @@ int main(){
 	
 	printf("====Exercicio repetição –Questão3========== \n");
 	Impares();
+	printf("\n");
+	
+	printf("====Exercicio repetição –Questão4========== \n");
+	Dividir();
 	printf("\n");
 	
 	
