@@ -132,6 +132,20 @@ void Pares(){
 	printf("A média da somatória é %0.2f\n",media);
 	
 }
+
+void Impares(){
+	 int a,soma;
+	 float media;
+	 soma=0;
+	for (a=500;a>=1;a-=2){
+		soma+=a;
+		
+	}
+	media=(soma)/250;
+	printf("A somatória dos impares entre 500 e 1 é %d\n",soma);
+	printf("A média da somatória é %0.2f\n",media);
+	
+}
 void Trocar(void){
 
   int a=10;
@@ -182,6 +196,10 @@ int main(){
 	
 	printf("====Exercicio repetição –Questão2========== \n");
 	Pares();
+	printf("\n");
+	
+	printf("====Exercicio repetição –Questão3========== \n");
+	Impares();
 	printf("\n");
 	
 	
