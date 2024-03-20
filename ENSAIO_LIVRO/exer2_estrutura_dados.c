@@ -160,9 +160,17 @@ void Regredir(void){
 	
 	int x=10;
 loop:
-	printf("O valor de x é %d\n",x);
+	printf("O valor regressivo de x é %d\n",x);
 	x--;
 	if(x>=0) goto loop;
+}
+
+void RegredirWhile(){
+	int a=10;
+	do{
+		printf("O valor regressivo de a é %d\n",a);
+		a--;
+	}while(a>=0);
 }
 
 
@@ -211,7 +219,11 @@ int main(){
 	printf("\n");
 	
 	printf("====Exercicio repetição –Questão5========== \n");
-	Regredir();
+	//Regredir();
+	printf("\n");
+	
+	printf("====Exercicio repetição –Questão6========== \n");
+	RegredirWhile();
 	printf("\n");
 	
 	
