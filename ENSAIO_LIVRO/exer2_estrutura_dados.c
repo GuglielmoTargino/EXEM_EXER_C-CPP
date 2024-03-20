@@ -7,6 +7,12 @@ Exercício 2 da disciplina estrutura de dados
 
 */
 
+/*
+
+
+
+*/
+
 #include <stdio.h>
 #include <locale.h>
 
@@ -34,6 +40,44 @@ void CobrarJuros(void){
   
   printf("O valor da prestação atrasada é R$%.2f\n", prestacao);
   
+}
+
+void Ordenac(void){
+	int n1,n2,n3;
+	n1=100;
+	n2=20;
+	n3=3;
+	
+	if(n1>n2 && n1>n3){
+		if(n2>n3){
+			printf(" Ordem crescente é %d %d %d",n3,n2,n1);
+		}else{
+			printf(" Ordem crescente é %d %d %d",n2,n3,n1);
+		}
+	
+	} 
+	
+	else if(n2>n1 && n2>n3){
+		if(n1>n3){
+  		    printf(" Ordem crescente é %d %d %d",n3,n1,n2);
+		}else{
+			printf(" Ordem crescente é %d %d %d",n1,n3,n2);
+		}
+		
+	}else {
+		  if(n3>n2 && n3>n1){
+		  		if(n2>n1){
+		    printf(" Ordem crescente é %d %d %d",n1,n2,n3);
+		  	
+		 	 }else{
+		  	printf(" Ordem crescente é %d %d %d",n2,n1,n3);
+		  }
+		
+		}
+	}
+	
+	
+	
 }
 
 
@@ -68,5 +112,11 @@ int main(){
 	printf(" ========== Exercícios sequenciais –Questão3 ====\n");
 	CobrarJuros();
 	printf("\n");
+	
+	printf("Exercícios de estruturas condicionais –Questão1 \n");
+	Ordenac();
+	printf("\n");
+	
+	
 	
 }
