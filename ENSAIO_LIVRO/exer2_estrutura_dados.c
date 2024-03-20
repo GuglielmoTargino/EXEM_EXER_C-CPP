@@ -50,27 +50,27 @@ void Ordenac(void){
 	
 	if(n1>n2 && n1>n3){
 		if(n2>n3){
-			printf(" Ordem crescente é %d %d %d",n3,n2,n1);
+			printf(" Ordem crescente é %d %d %d\n",n3,n2,n1);
 		}else{
-			printf(" Ordem crescente é %d %d %d",n2,n3,n1);
+			printf(" Ordem crescente é %d %d %d\n",n2,n3,n1);
 		}
 	
 	} 
 	
 	else if(n2>n1 && n2>n3){
 		if(n1>n3){
-  		    printf(" Ordem crescente é %d %d %d",n3,n1,n2);
+  		    printf(" Ordem crescente é %d %d %d\n",n3,n1,n2);
 		}else{
-			printf(" Ordem crescente é %d %d %d",n1,n3,n2);
+			printf(" Ordem crescente é %d %d %d\n",n1,n3,n2);
 		}
 		
 	}else {
 		  if(n3>n2 && n3>n1){
 		  		if(n2>n1){
-		    printf(" Ordem crescente é %d %d %d",n1,n2,n3);
+		    printf(" Ordem crescente é %d %d %d\n",n1,n2,n3);
 		  	
 		 	 }else{
-		  	printf(" Ordem crescente é %d %d %d",n2,n1,n3);
+		  	printf(" Ordem crescente é %d %d %d\n",n2,n1,n3);
 		  }
 		
 		}
@@ -92,6 +92,32 @@ void Diferir(){
 	}
 }
 
+void Resultado(void){
+
+  int a=5;
+  int b=5;
+  int c=4;
+  int d=4;
+  float media=(a+b+c+d)/4;
+  if(media>=7){
+    printf("Aluno foi aprovado: %.2f\n",media);
+  }else if (media>=5 && media<7){
+    printf("Fazer exame : %.2f\n",media);
+  }else printf( "Aluno reprovado: %.2f\n",media);
+}
+
+void Somatoria(void){
+
+  int contador=55;
+  int a=0;
+  while(contador <=155){
+    a=contador+a;
+    contador++;
+   
+  }
+  printf("a somatória de 55 até 155 é: %d\n",a);
+  
+}
 
 void Trocar(void){
 
@@ -125,12 +151,20 @@ int main(){
 	CobrarJuros();
 	printf("\n");
 	
-	printf("Exercícios de estruturas condicionais –Questão1 \n");
+	printf("========Exercícios condicionais –Questão1======== \n");
 	Ordenac();
 	printf("\n");
 	
-	printf("Exercícios de estruturas condicionais –Questão2 \n");
+	printf("========Exercicio condicionais –Questão2========== \n");
 	Diferir();
+	printf("\n");
+	
+	printf("========Exercicio condicionais –Questão3========== \n");
+	Resultado();
+	printf("\n");
+	
+	printf("========Exercicio repetição –Questão1========== \n");
+	Somatoria();
 	printf("\n");
 	
 	
