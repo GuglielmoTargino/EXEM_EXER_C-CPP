@@ -80,6 +80,18 @@ void Ordenac(void){
 	
 }
 
+void Diferir(){
+	int n1, n2;
+	
+	n1=20;
+	n2=10;
+	if(n1>n2){
+		printf(" A diferença entre %d e %d é %d \n",n1, n2, n1-n2);
+	}else{
+		printf(" A diferença entre %d  %d é %d \n",n2,n1, n2-n1);
+	}
+}
+
 
 void Trocar(void){
 
@@ -117,6 +129,9 @@ int main(){
 	Ordenac();
 	printf("\n");
 	
+	printf("Exercícios de estruturas condicionais –Questão2 \n");
+	Diferir();
+	printf("\n");
 	
 	
 }
