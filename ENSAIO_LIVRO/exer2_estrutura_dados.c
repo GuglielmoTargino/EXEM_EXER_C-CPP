@@ -160,7 +160,7 @@ void Regredir(void){
 	
 	int x=10;
 loop:
-	printf("O valor regressivo de x é %d\n",x);
+	printf("O valor regressivo de X é %d\n",x);
 	x--;
 	if(x>=0) goto loop;
 }
@@ -168,9 +168,48 @@ loop:
 void RegredirWhile(){
 	int a=10;
 	do{
-		printf("O valor regressivo de a é %d\n",a);
+		printf("O valor regressivo de A é %d\n",a);
 		a--;
 	}while(a>=0);
+}
+
+void RegredirImpar(){
+	int a=9;
+	while(a>=0){
+		printf("O valor regressivo de B é %d\n", a);
+		a-=2;
+	}
+}
+
+void Semana(){
+	int dia=1;
+	
+	switch(dia){
+		case 1:
+			printf("Dia 1 é Domingo");
+			break;
+		case 2:
+			printf("Dia 2 é Segunda-feira");
+			break;
+		case 3:
+			printf("Dia 3 é Terça-feira");
+			break;
+		case 4:
+			printf("Dia 4 é Quarta-feira");
+			break;
+		case 5:
+			printf("Dia 5 é Quinta-feira");
+			break;
+		case 6:
+			printf("Dia 6 é Sexta-feira");
+			break;
+		case 7:
+			printf("Dia 7 é Sábado");
+			break;
+		default:
+		printf("ERRO! Digite apenas de 1 até 7.");
+			
+	} 
 }
 
 
@@ -215,17 +254,24 @@ int main(){
 	printf("\n");
 	
 	printf("====Exercicio repetição –Questão4========== \n");
-	//Dividir();
+	Dividir();
 	printf("\n");
 	
 	printf("====Exercicio repetição –Questão5========== \n");
-	//Regredir();
+	Regredir();
 	printf("\n");
 	
 	printf("====Exercicio repetição –Questão6========== \n");
 	RegredirWhile();
 	printf("\n");
 	
+	printf("====Exercicio repetição –Questão7========== \n");
+	RegredirImpar();
+	printf("\n");
+	
+	printf("====Exercicio repetição –Questão8========== \n");
+	Semana();
+	printf("\n");
 	
 	
 	
