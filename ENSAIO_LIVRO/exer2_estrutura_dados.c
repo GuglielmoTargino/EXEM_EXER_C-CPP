@@ -21,7 +21,18 @@ void Conver(void){
 float pes=0.3048;
 float cent=pes*100;
   printf(" 1 pés equivale à %.2f centimetros\n",cent);
+  
+}
 
+void CobrarJuros(void){
+  float valor=80;
+  int tempo=10;
+  float taxa=15;
+  float prestacao;
+
+  prestacao=(valor+(valor*(taxa/100))*tempo);
+  
+  printf("O valor da prestação atrasada é R$%.2f\n", prestacao);
   
 }
 
@@ -45,10 +56,17 @@ void Trocar(void){
 int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
+	
 	printf(" ========== Exercícios sequenciais –Questão1 ====\n");
 	Quadrado();
+	printf("\n");
 	
 	printf(" ========== Exercícios sequenciais –Questão2 ====\n");
-	
 	Conver();
+	printf("\n");
+	
+	printf(" ========== Exercícios sequenciais –Questão3 ====\n");
+	CobrarJuros();
+	printf("\n");
+	
 }
