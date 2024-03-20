@@ -153,9 +153,16 @@ void Dividir(void){
 	for (a=498; a>=1; a-=2){
 		printf("Os números menores que 500 disíveis por 2 são %d\n",a);
 	}
-
- 
   
+}
+
+void Regredir(void){
+	
+	int x=10;
+loop:
+	printf("O valor de x é %d\n",x);
+	x--;
+	if(x>=0) goto loop;
 }
 
 
@@ -200,7 +207,11 @@ int main(){
 	printf("\n");
 	
 	printf("====Exercicio repetição –Questão4========== \n");
-	Dividir();
+	//Dividir();
+	printf("\n");
+	
+	printf("====Exercicio repetição –Questão5========== \n");
+	Regredir();
 	printf("\n");
 	
 	
