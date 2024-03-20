@@ -16,6 +16,15 @@ void Quadrado(void){
   printf(" O valor de a=10 elevado ao quadrado é: %d\n", result);  
 }
 
+void Conver(void){
+
+float pes=0.3048;
+float cent=pes*100;
+  printf(" 1 pés equivale à %.2f centimetros\n",cent);
+
+  
+}
+
 
 void Trocar(void){
 
@@ -36,8 +45,10 @@ void Trocar(void){
 int main(){
 	
 	setlocale(LC_ALL,"Portuguese");
-	printf(" ========== Exercícios sequenciais –Questão1 ====\n");	
+	printf(" ========== Exercícios sequenciais –Questão1 ====\n");
 	Quadrado();
 	
+	printf(" ========== Exercícios sequenciais –Questão2 ====\n");
 	
+	Conver();
 }
