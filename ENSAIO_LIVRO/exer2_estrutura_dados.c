@@ -119,6 +119,19 @@ void Somatoria(void){
   
 }
 
+void Pares(){
+	 int a,soma;
+	 float media;
+	 soma=0;
+	for (a=50;a<=5000;a+=2){
+		soma+=a;
+		
+	}
+	media=(soma)/2475;
+	printf("A somatória dos pares entre 50 e 5000 é %d\n",soma);
+	printf("A média da somatória é %0.2f\n",media);
+	
+}
 void Trocar(void){
 
   int a=10;
@@ -166,6 +179,12 @@ int main(){
 	printf("========Exercicio repetição –Questão1========== \n");
 	Somatoria();
 	printf("\n");
+	
+	printf("====Exercicio repetição –Questão2========== \n");
+	Pares();
+	printf("\n");
+	
+	
 	
 	
 }
