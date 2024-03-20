@@ -1,5 +1,5 @@
 /*
-Exercício 2 da disciplina estrutura de dados
+Resolução da atividade 2 da disciplina estrutura de dados.
  
  Aluno: Guglielmo Henriques Targino
  Data: 20mar24.
@@ -7,21 +7,18 @@ Exercício 2 da disciplina estrutura de dados
 
 */
 
-/*
-
-
-
-*/
 
 #include <stdio.h>
-#include <locale.h>
+#include <locale.h> // biblioteca para caracteres acentuados.
 
+//função sequencial Q1.
 void Quadrado(void){
   int a=10;
   int result=a*a;
   printf(" O valor de a=10 elevado ao quadrado é: %d\n", result);  
 }
 
+//função sequencial Q2.
 void Conver(void){
 
 float pes=0.3048;
@@ -30,6 +27,7 @@ float cent=pes*100;
   
 }
 
+//função sequencial Q3.
 void CobrarJuros(void){
   float valor=80;
   int tempo=10;
@@ -42,6 +40,7 @@ void CobrarJuros(void){
   
 }
 
+//função estrutura condicional Q1.
 void Ordenac(void){
 	int n1,n2,n3;
 	n1=100;
@@ -80,6 +79,7 @@ void Ordenac(void){
 	
 }
 
+//função estrutura condicional Q2.
 void Diferir(){
 	int n1, n2;
 	
@@ -92,6 +92,7 @@ void Diferir(){
 	}
 }
 
+//função estrutura condicional Q3.
 void Resultado(void){
 
   int a=5;
@@ -106,6 +107,7 @@ void Resultado(void){
   }else printf( "Aluno reprovado: %.2f\n",media);
 }
 
+//função estrutura repetição Q1.
 void Somatoria(void){
 
   int contador=55;
@@ -119,6 +121,7 @@ void Somatoria(void){
   
 }
 
+//função estrutura repetição Q2.
 void Pares(){
 	 int a,soma;
 	 float media;
@@ -133,6 +136,7 @@ void Pares(){
 	
 }
 
+//função estrutura repetição Q3.
 void Impares(){
 	 int a,soma;
 	 float media;
@@ -146,6 +150,8 @@ void Impares(){
 	printf("A média da somatória é %0.2f\n",media);
 	
 }
+
+//função estrutura repetição Q4.
 void Dividir(void){
 	printf("O primeiro digito do RA é 2.\n");
 	int a;
@@ -156,6 +162,7 @@ void Dividir(void){
   
 }
 
+//função estrutura repetição Q5.
 void Regredir(void){
 	
 	int x=10;
@@ -165,6 +172,7 @@ loop:
 	if(x>=0) goto loop;
 }
 
+//função estrutura repetição Q6.
 void RegredirWhile(){
 	int a=10;
 	do{
@@ -173,6 +181,7 @@ void RegredirWhile(){
 	}while(a>=0);
 }
 
+//função estrutura repetição Q7.
 void RegredirImpar(){
 	int a=9;
 	while(a>=0){
@@ -181,6 +190,7 @@ void RegredirImpar(){
 	}
 }
 
+//função estrutura repetição Q8.
 void Semana(){
 	int dia=1;
 	
