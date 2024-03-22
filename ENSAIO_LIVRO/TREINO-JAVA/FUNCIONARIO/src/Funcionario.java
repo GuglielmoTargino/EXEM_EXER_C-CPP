@@ -1,11 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
-/**
- *
- * @author Guglielmo H T
+Exercício do livro JAVA.
+Aluno: Guglielmo Targino.
+Data: 22mar24.
+Versão: v0.
  */
 public class Funcionario {
     private int matricula;
@@ -21,5 +18,44 @@ public Funcionario(int matricula, String nome, String cargo, double salario){
     this.salario=salario;   
     
 }
+
+public Funcionario(){
+    
+}
+
+public int getMatricula(){
+    return matricula;
+}
+public void setMatricula(int matricula){
+    this.matricula=matricula;
+}
+
+public String getNome(){
+    return nome;    
+}
+public void setNome(String nome){
+    this.nome=nome;
+}
+
+public String getCargo(){
+    return cargo;
+}
+public void setCargo(String cargo){
+    this.cargo=cargo;
+    
+}
+
+public double getSalario(){
+    return salario;
+}
+public void setSalario(double salario){
+    this.salario=salario;
+}
+
+public void ajustarSalario(){
+    this.salario=this.salario+this.salario*percentual/100;
+}
+
+
     
 }
