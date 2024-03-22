@@ -39,120 +39,66 @@ void main(void){
 		
 		switch(s2[i]){
 		case ' ':			
-			
 			break;
 		
 		case 'a':
-		
+		case 'j':
+		case 's':		
 			delta+=1;
-			break;			
+			break;
+						
 		case 'b':
-			
+		case 'k':
+		case 't':			
 			delta+=2;
 			break;
 	
 		case 'c':
-			
+		case 'l':
+		case 'u':			
 			delta+=3;
 			break;
-		case 'd':
 			
+		case 'd':
+		case 'm':
+		case 'v':			
 			delta+=4;
 			break;
 			
 		case 'e':
-			
+		case 'n':
+		case 'w':			
 			delta+=5;			
 			break;
 			
 		case 'f':
-			
-			delta+=6;
-			break;
-		case 'g':
-			
-			delta+=7;
-			break;
-		case 'h':
-			
-			delta+=8;
-			break;
-		case 'i':
-			
-			delta+=9;
-			break;
-		case 'j':
-			
-			delta+=1;
-			break;
-		case 'k':
-			
-			delta+=2;
-			break;
-		case 'l':
-			
-			delta+=3;
-			break;
-		case 'm':
-			
-			delta+=4;
-			break;
-		case 'n':
-			
-			delta+=5;
-			break;
 		case 'o':
-			
+		case 'x':			
 			delta+=6;
 			break;
+			
+		case 'g':
 		case 'p':
-			
+		case 'y':			
 			delta+=7;
 			break;
+			
+		case 'h':
 		case 'q':
-			
-			delta+=8;
-			break;
-		case 'r':
-			
-			delta+=9;
-			break;
-		case 's':
-			
-			delta+=1;
-			break;
-		case 't':
-			
-			delta+=2;
-			break;
-		case 'u':
-			
-			delta+=3;
-			break;
-		case 'v':
-			
-			delta+=4;
-			break;
-		case 'w':
-		
-			delta+=5;
-			break;
-		case 'x':
-			
-			delta+=6;
-			break;
-		case 'y':
-			
-			delta+=7;
-			break;
 		case 'z':			
 			delta+=8;
 			break;
+			
+		case 'i':
+		case 'r':			
+			delta+=9;
+			break;
+		
 		default:
 			printf("ERRO. Favor não digitar números ou simbolos_\n");
 			i=cx;
 			delta=0;
-	}
+		}
 	
 	}
 	
@@ -169,19 +115,12 @@ void main(void){
 			printf(" Seu número mestre da sorte é %d.\n",delta);
 		}else{
 			printf("Resultado para cáculo: %d\n ",delta);
-	/*printf(" CE é %d\n ",ce);
-	printf(" DE é %d\n ",de);
-	printf(" UN é %d\n ",un);
-	printf(" CODE é %d\n ",code);*/
+
 	printf("Seu número da sorte é %d.\n ",resu);
 			
-		}
-		
-		
+		}		
 	
-	system("pause");
-	
-	
+	system("pause");	
 	}
 	
 	
