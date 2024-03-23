@@ -53,7 +53,7 @@ public void setSalario(double salario){
 }
 
 public void ajustarSalario(){
-    this.salario=this.salario+this.salario*percentual/100;
+    this.salario=this.salario+(this.salario*1.2);
 }
 
 
