@@ -10,28 +10,30 @@ Versão: v0.
 
 #include <iostream>
 #include <string>
+#include <locale>
 
 using namespace std;
 
 class Carro{
-	private:
-	string marca;
-	string mod;
-	int ano;
 	
-	public:
+		private: string marca;
+		private: string mod;
+		private: int ano;
+	
+
 		//construtor
-		Carro(string m, string md, int a){
+		public: Carro(string m, string md, int a){
 			marca=m;
 			mod=md;
 			ano=a;
 		}
 		
 		// metodo para exibir
-		void ExibirCarro(){
-			cout<<"marca"<< marca<<endl;
-			cout<<"modelo"<<mod<<endl;
-			cout<<"ano"<<ano<<endl;
+	
+ 		public: void ExibirCarro(){
+			cout<<"a marca é "<< marca<<endl;
+			cout<<"o modelo é "<<mod<<endl;
+			cout<<"o ano é "<<ano<<endl;
 			
 		}
 			
@@ -39,9 +41,10 @@ class Carro{
 
 
 int main(void){
+	setlocale(LC_ALL,"Portuguese");
 	
 	//objeto de carro
-	Carro veiculo("fiat","brava",200);
+	Carro veiculo("fiat","brava",2000);
 	
 	veiculo.ExibirCarro();
 	
