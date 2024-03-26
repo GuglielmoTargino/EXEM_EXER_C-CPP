@@ -52,8 +52,9 @@ public void setSalario(double salario){
     this.salario=salario;
 }
 
-public void ajustarSalario(){
-    this.salario=this.salario+(this.salario*1.2);
+public float ajustarSalario(float tx){
+    this.salario+=(this.salario*tx/100);
+    
 }
 
 
