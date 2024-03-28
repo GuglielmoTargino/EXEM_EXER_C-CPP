@@ -22,12 +22,11 @@ class Pessoa{
 	 		
 		 }
 	 public:
+	 	
 		void exibirPessoa(){
 			cout<<"nome é:\n"<<name<<endl;
 			cout<<"idade é:\n"<<idade<<endl;
-		};
-		
-	
+		};	
 	
 };
 
@@ -36,8 +35,6 @@ class Pessoa{
 int main(void){
 	
 	Pessoa andrea("andrea",38);
-	andrea.exibirPessoa();
-	
-	
+	andrea.exibirPessoa();	
 	
 }
