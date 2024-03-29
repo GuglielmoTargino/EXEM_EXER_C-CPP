@@ -25,25 +25,26 @@ class Pessoa{
 	
 	 
 		void exibirPessoa(){
-			cout<<"nome é:\n"<<name<<endl;
-			cout<<"idade é:\n"<<idade<<endl;
+			cout<<"O nome da dona é:"<<name<<endl;
+			cout<<" A idade é:"<<idade<<endl;
 		};	
 	
 };
 
 class Pet{
-	sting nome;
-	string tipo;
+	
+	private: string nome;
+	private: string tipo;
 	
 	
-	Pet(string n, string t){
+	public: Pet(string n, string t){
 		nome=n;
 		tipo=t;		
 	}
 	
-	mostrarPet(){
-		cout<<"O pet é: "<<nome;
-		cout<<" a raça é "<<tipo;
+	public: void mostrarPet(){
+		cout<<"O pet dela é: "<<nome<<endl;
+		cout<<" do tipo "<<tipo;
 	}
 	
 };
@@ -53,13 +54,11 @@ class Pet{
 int main(void){
 	setlocale(LC_ALL,"Portuguese");
 	
-	Pessoa user1("andrea",38);
+	Pessoa user1("Andrea",38);
 	user1.exibirPessoa();
 	
 	Pet gato("Lic","Gato");
-	
-
-	
+	gato.mostrarPet();	
 		
 	
 }
