@@ -53,10 +53,8 @@ public void setSalario(double salario){
 }
 
 public double ajustarSalario(double tx){
-    this.salario+=(this.salario*tx/1.1);
+    this.salario+=(this.salario)*(tx/100);
 return this.salario;
 }
 
-
-    
 }

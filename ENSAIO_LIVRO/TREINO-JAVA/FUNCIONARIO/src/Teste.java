@@ -14,13 +14,13 @@ public class Teste {
         Funcionario func=new Funcionario();
         func.setMatricula(67543);
         func.setNome("Guga");
-        func.setSalario(10);
-        saj=func.ajustarSalario(1000);
+        func.setSalario(1000);
+        saj=func.ajustarSalario(10);
         
         
         //System.out.println(func.getNome());
-        JOptionPane.showMessageDialog(null,"Nome é :"+ func.getNome());
-        JOptionPane.showMessageDialog(null,"a matricula é :"+func.getMatricula());
+        //JOptionPane.showMessageDialog(null,"Nome é :"+ func.getNome());
+        //JOptionPane.showMessageDialog(null,"a matricula é :"+func.getMatricula());
         //JOptionPane.showMessageDialog(null,"Salario é:"+ saj);
         System.out.println(saj);
         
