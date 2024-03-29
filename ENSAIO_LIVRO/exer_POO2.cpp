@@ -7,6 +7,7 @@ Versão: v0
 
 #include <iostream>
 #include <string>
+#include <locale>
 using namespace std;
 
 class Pessoa{
@@ -15,14 +16,14 @@ class Pessoa{
 	 int idade;
 	 
 	 
-	 public:
-		Pessoa(string nome, int dade){
+		public:
+  		    Pessoa(string nome, int dade){
 	 		name=nome;
 	 		idade=dade;	 		
 	 		
 		 }
-	 public:
-	 	
+	
+	 
 		void exibirPessoa(){
 			cout<<"nome é:\n"<<name<<endl;
 			cout<<"idade é:\n"<<idade<<endl;
@@ -30,11 +31,35 @@ class Pessoa{
 	
 };
 
+class Pet{
+	sting nome;
+	string tipo;
+	
+	
+	Pet(string n, string t){
+		nome=n;
+		tipo=t;		
+	}
+	
+	mostrarPet(){
+		cout<<"O pet é: "<<nome;
+		cout<<" a raça é "<<tipo;
+	}
+	
+};
+
 
 
 int main(void){
+	setlocale(LC_ALL,"Portuguese");
 	
-	Pessoa andrea("andrea",38);
-	andrea.exibirPessoa();	
+	Pessoa user1("andrea",38);
+	user1.exibirPessoa();
+	
+	Pet gato("Lic","Gato");
+	
+
+	
+		
 	
 }
