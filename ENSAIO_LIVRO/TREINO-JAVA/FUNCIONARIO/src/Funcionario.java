@@ -12,11 +12,10 @@ public class Funcionario {
     
     /* metodo construtor*/
 public Funcionario(int matricula, String nome, String cargo, double salario){
-    this.cargo=cargo;
     this.matricula=matricula;
     this.nome=nome;
-    this.salario=salario;   
-    
+    this.cargo=cargo;    
+    this.salario=salario;     
 }
 
 public Funcionario(){
