@@ -14,9 +14,13 @@ public class AulaAutomatos {
      */
     public static void main(String[] args) {
         
-        String palavra="testeguga020202";
+        String palavra="www.uni9.br";
         
         // TODO code application logic here
+        
+        //boolean verifica=palavra.matches("^[abcd]-[2345]#\\d $");
+        boolean verifica =palavra.matches("^[w]{3}+[.][a-z0-9]+[.][a-z]+$");
+        System.out.println(verifica);
     }
     
 }
