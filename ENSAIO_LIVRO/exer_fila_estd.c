@@ -9,7 +9,7 @@ exercíciode aula para exercitar a programação em fila.
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 2
 
 typedef struct {
 		int data[MAX_SIZE];
@@ -48,7 +48,7 @@ int estaCheio(Fila *q) {
 void enqueue(Fila *q, int valor) {
 		if (estaCheio(q)) {
 				printf("Fila cheia. Não é possível adicionar elemento.\n");
-				return;
+			
 		}
 		if (estaVazio(q)) {
 				q->inicio = 0;
@@ -76,16 +76,29 @@ int dequeue(Fila *q) {
 
 // Função principal para testar a fila
 int main() {
+	
+ 		
+ 		   
+ 		   
 		Fila fila;
 		iniciarFila(&fila);
 
-		enqueue(&fila, 10);
-		enqueue(&fila, 20);
+		enqueue(&fila, 190);
+		dequeue(&fila);
+		
+		
+		printf("Removido da fila: %d\n", dequeue(&fila));
+		
+		/*
+		
+		
+		
+enqueue(&fila, 20);
 		enqueue(&fila, 30);
-
+	
+	printf("Removido da fila: %d\n", dequeue(&fila));
+	
 		printf("Removido da fila: %d\n", dequeue(&fila));
-		printf("Removido da fila: %d\n", dequeue(&fila));
-		printf("Removido da fila: %d\n", dequeue(&fila));
-		printf("Removido da fila: %d\n", dequeue(&fila));		
+		*/		
 		return 0;
 }
