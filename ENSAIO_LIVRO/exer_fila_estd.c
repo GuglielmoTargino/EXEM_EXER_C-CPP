@@ -47,7 +47,7 @@ int estaCheio(Fila *q) {
 // Função para adicionar um elemento à fila
 void enqueue(Fila *q, int valor) {
 		if (estaCheio(q)) {
-				printf("Fila cheia. Não é possível adicionar elemento.\n");
+		printf("Fila cheia. Não é possível adicionar elemento.\n");
 			
 		}
 		if (estaVazio(q)) {
@@ -77,10 +77,7 @@ int dequeue(Fila *q) {
 // Função principal para testar a fila
 int main() {
 	
- 		
- 		   
- 		   
-		Fila fila;
+ 		Fila fila;
 		iniciarFila(&fila);
 
 		enqueue(&fila, 190);
