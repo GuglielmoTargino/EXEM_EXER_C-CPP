@@ -1,5 +1,10 @@
 /*
   Exercício 2 da disciplina de estrutura de dados.
+  Verificar se é preciso ou não disponibilzar um 
+  caixa a mais para o atendimento aos clientes numa fila de banco.
+  Isso somente se o tempo de atendimento ultrapassar
+  8 minutos de média.
+  
   Aluno: Guglielmo Hrntiques Targino.
   Data: 17abr24.
   Versão: v0.
@@ -18,10 +23,7 @@
 	// Cria uma estrutura simulando uma pessoa
 typedef struct {
 	char nome[MAX_NAME_LENGTH];
-	int idade;
-    int cpf;
-    char dt_nasc[9];
-    char motivo;
+	int tempo;
 	} Pessoa;
 	
 	
@@ -57,10 +59,10 @@ int estaCheio(Fila *q) {
    int sr=0;
    int se=5; // variaveis(status reclamação_sr) e (status elogio_se)
    // Função para adicionar uma pessoa à fila
-void enqueue(Fila *q, const char *nome, int idade, int cpf, const char *dt, char mot) {  
+void enqueue(Fila *q, const char *nome, int tempo) {  
 	 
 	 //contador de reclamação.
-    if (mot=='R'){
+    if (tempo=='R'){
       sr+=1;     
     }
     
@@ -76,14 +78,10 @@ void enqueue(Fila *q, const char *nome, int idade, int cpf, const char *dt, char
     
     // Copia o nome para a estrutura Pessoa
     strncpy(q->data[q->fim].nome, nome, MAX_NAME_LENGTH - 1);
-    strncpy(q->data[q->fim].dt_nasc, dt,10);
     
     // Garante que o nome seja terminado corretamente
     q->data[q->fim].nome[MAX_NAME_LENGTH - 1] = '\0'; 
-    q->data[q->fim].idade = idade;
-    q->data[q->fim].cpf = cpf;
-    q->data[q->fim].dt_nasc [10]= '\0';
-    q->data[q->fim].motivo = mot;  
+    q->data[q->fim].tempo=tempo; 
     
 	}
 
@@ -113,11 +111,11 @@ int main() {
     Fila fila;
     iniciarFila(&fila);
 
-    enqueue(&fila, "Maria", 30, 205045386, "17/abr/24", 'E');    
-    enqueue(&fila, "Paulo", 20,562389,"22/mai/21",'R');
-    enqueue(&fila, "Marcio", 40,754845,"12/jul/78",'E');
-    enqueue(&fila, "Flavia", 36,568521,"23/dez/20",'R');
-    enqueue(&fila, "Dara", 33,235689,"11/fev/80",'R');
+    enqueue(&fila, "Maria", 30);    
+    enqueue(&fila, "Paulo", 20);
+    enqueue(&fila, "Marcio", 40);
+    enqueue(&fila, "Flavia", 36);
+    enqueue(&fila, "Dara", 33);
     
   
     Pessoa pessoa1 = dequeue(&fila);  
@@ -127,13 +125,15 @@ int main() {
     Pessoa pessoa5 = dequeue(&fila);
      
 
-    printf("Removido da fila: %s, %d anos, CPF=%d  DT_NASC:%s MOTIVO:%c\n", pessoa1.nome, pessoa1.idade,pessoa1.cpf,pessoa1.dt_nasc,pessoa1.motivo);
+    printf("Removido da fila: %s, %d tempo\n", pessoa1.nome, pessoa1.tempo);
+    /*
    	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa2.nome, pessoa1.idade,pessoa2.cpf,pessoa2.dt_nasc,pessoa2.motivo);
    	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa3.nome, pessoa1.idade,pessoa3.cpf,pessoa3.dt_nasc,pessoa3.motivo);
    	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa4.nome, pessoa1.idade,pessoa1.cpf,pessoa4.dt_nasc,pessoa4.motivo);
    	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa5.nome, pessoa1.idade,pessoa5.cpf,pessoa5.dt_nasc,pessoa5.motivo);
  	
    	printf("Na fila de hoje, %d vieram reclamar e %d vieram elogiar",sr,se-sr);
+   	*/
   
    
    
