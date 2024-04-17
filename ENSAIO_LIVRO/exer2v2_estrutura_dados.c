@@ -2,8 +2,8 @@
   Exercício 2 parte 2 da disciplina de estrutura de dados.
   Verificar se é preciso ou não disponibilzar um 
   caixa a mais para o atendimento aos clientes numa fila de banco.
-  Isso somente se o tempo de atendimento ultrapassar
-  8 minutos de média.
+  Somente se o tempo nédio de atendimento ultrapassar 8 min. 
+  
   
   Aluno: Guglielmo Hrntiques Targino.
   Data: 17abr24.
@@ -56,11 +56,11 @@ int estaCheio(Fila *q) {
     return (proximoFim == q->inicio);
 	}
 	
-   int st,m=0; // variaveis(status reclamação_sr) e (status elogio_se)
+   int st,m=0; // variaveis(status tempo_sr) e (média=m)
    // Função para adicionar uma pessoa à fila
 void enqueue(Fila *q, const char *nome, int tempo) {  
 	 
-	 //contador de reclamação.
+	 //cáculo da média de tempo gasto na fila.
    	 st+=tempo;
    	 m=st/5;
     
@@ -123,11 +123,11 @@ int main() {
     Pessoa pessoa5 = dequeue(&fila);
      
 
-    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa1.nome, pessoa1.tempo);
-    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa2.nome, pessoa2.tempo);
-    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa3.nome, pessoa3.tempo);
-    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa4.nome, pessoa4.tempo);
-    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa5.nome, pessoa5.tempo);
+    printf("Removido da fila: %s, que gastou %d minutos.\n", pessoa1.nome, pessoa1.tempo);
+    printf("Removido da fila: %s, que gastou %d minutos.\n", pessoa2.nome, pessoa2.tempo);
+    printf("Removido da fila: %s, que gastou %d minutos.\n", pessoa3.nome, pessoa3.tempo);
+    printf("Removido da fila: %s, que gastou %d minutos.\n", pessoa4.nome, pessoa4.tempo);
+    printf("Removido da fila: %s, que gastou %d minutos.\n", pessoa5.nome, pessoa5.tempo);
     
     if(m>8){
     		printf("Tempo médio de atemdimento superior à 8 minutos. Necessário mais um caixa.");
