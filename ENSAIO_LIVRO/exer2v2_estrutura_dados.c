@@ -1,5 +1,5 @@
 /*
-  Exercício 2 da disciplina de estrutura de dados.
+  Exercício 2 parte 2 da disciplina de estrutura de dados.
   Verificar se é preciso ou não disponibilzar um 
   caixa a mais para o atendimento aos clientes numa fila de banco.
   Isso somente se o tempo de atendimento ultrapassar
@@ -56,15 +56,13 @@ int estaCheio(Fila *q) {
     return (proximoFim == q->inicio);
 	}
 	
-   int sr=0;
-   int se=5; // variaveis(status reclamação_sr) e (status elogio_se)
+   int st,m=0; // variaveis(status reclamação_sr) e (status elogio_se)
    // Função para adicionar uma pessoa à fila
 void enqueue(Fila *q, const char *nome, int tempo) {  
 	 
 	 //contador de reclamação.
-    if (tempo=='R'){
-      sr+=1;     
-    }
+   	 st+=tempo;
+   	 m=st/5;
     
   
     if (estaCheio(q)) {
@@ -111,11 +109,11 @@ int main() {
     Fila fila;
     iniciarFila(&fila);
 
-    enqueue(&fila, "Maria", 30);    
-    enqueue(&fila, "Paulo", 20);
-    enqueue(&fila, "Marcio", 40);
-    enqueue(&fila, "Flavia", 36);
-    enqueue(&fila, "Dara", 33);
+    enqueue(&fila, "Maria",10);    
+    enqueue(&fila, "Paulo",8);
+    enqueue(&fila, "Marcio",6);
+    enqueue(&fila, "Flavia",3);
+    enqueue(&fila, "Dara",5);
     
   
     Pessoa pessoa1 = dequeue(&fila);  
@@ -125,17 +123,16 @@ int main() {
     Pessoa pessoa5 = dequeue(&fila);
      
 
-    printf("Removido da fila: %s, %d tempo\n", pessoa1.nome, pessoa1.tempo);
-    /*
-   	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa2.nome, pessoa1.idade,pessoa2.cpf,pessoa2.dt_nasc,pessoa2.motivo);
-   	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa3.nome, pessoa1.idade,pessoa3.cpf,pessoa3.dt_nasc,pessoa3.motivo);
-   	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa4.nome, pessoa1.idade,pessoa1.cpf,pessoa4.dt_nasc,pessoa4.motivo);
-   	printf("Removido da fila: %s, %d anos, CPF=%d, DT_NASC:%s MOTIVO:%c\n", pessoa5.nome, pessoa1.idade,pessoa5.cpf,pessoa5.dt_nasc,pessoa5.motivo);
- 	
-   	printf("Na fila de hoje, %d vieram reclamar e %d vieram elogiar",sr,se-sr);
-   	*/
-  
-   
+    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa1.nome, pessoa1.tempo);
+    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa2.nome, pessoa2.tempo);
+    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa3.nome, pessoa3.tempo);
+    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa4.nome, pessoa4.tempo);
+    printf("Removido da fila: %s, Que gastou %d minutos.\n", pessoa5.nome, pessoa5.tempo);
+    
+    if(m>8){
+    		printf("Tempo médio de atemdimento superior à 8 minutos. Necessário mais um caixa.");
+    	
+	} else 	printf("Tempo médio de atemdimento inferior à 8 minutos. Não é necessário mais um caixa.");
    
     return 0;
 }
