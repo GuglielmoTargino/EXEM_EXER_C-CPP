@@ -13,6 +13,14 @@ public class Teste {
         Funcionario empregado[];
         empregado=new Funcionario[2];
         Funcionario func;
+        Funcionario colaborador=new Funcionario();
+        
+        colaborador.setNome("lic");
+        
+        System.out.println(colaborador.getNome());
+       
+        /*  
+        
    
         for(int indice=0; indice<empregado.length;indice++){
             func=new Funcionario();
@@ -28,8 +36,9 @@ public class Teste {
             func=empregado[indice];
             JOptionPane.showMessageDialog(null, "Nome do empregado "+(indice+1)+" é "+func.getNome());
             JOptionPane.showMessageDialog(null, "Cargo do empregado é:"+(indice+1)+"é"+func.getCargo());
-        }
+        }*/
         
     }
+        
      
 }

@@ -1,5 +1,5 @@
 /*
-Exercício do livro JAVA.
+Exercício do e-book JAVA by Evandro Teruel.
 Aluno: Guglielmo Targino.
 Data: 22mar24.
 Versão: v0.
