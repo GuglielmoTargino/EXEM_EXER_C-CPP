@@ -1,5 +1,6 @@
 
 import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 /*
 Exercício do livro JAVA
@@ -14,10 +15,14 @@ public class Teste {
         empregado=new Funcionario[2];
         Funcionario func;
         Funcionario colaborador=new Funcionario();
+        Scanner ler;
+        ler=new Scanner(System.in);
+        System.out.println("digite o nome");
         
-        colaborador.setNome("lic");
         
-        System.out.println(colaborador.getNome());
+        colaborador.setNome(ler.nextLine());
+        
+        System.out.println("vc digitou :"+colaborador.getNome());
        
         /*  
         
