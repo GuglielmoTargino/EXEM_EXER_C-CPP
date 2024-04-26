@@ -9,6 +9,7 @@ package app;
  * @author Guglielmo H T
  */
 public class Calculo {
+ 
     
     public Calculo(){        
     }
