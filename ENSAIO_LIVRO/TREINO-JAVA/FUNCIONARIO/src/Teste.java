@@ -17,6 +17,7 @@ public class Teste {
         Funcionario colaborador=new Funcionario();
         Scanner ler;
         ler=new Scanner(System.in);
+        
         System.out.println("digite o nome");
         
         
