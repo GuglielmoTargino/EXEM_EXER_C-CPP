@@ -9,6 +9,10 @@ package app;
  * @author Guglielmo H T
  */
 public class Calculo {
+    
+    public Calculo(){        
+    }
+    
     public double media(double v1, double v2){
         return (v1+v2)/2;
     }
@@ -22,11 +26,11 @@ public class Calculo {
         
     }
     
-    public int soma (int v1, int v2, int v3){
+    public double soma (int v1, int v2, double v3){
         return v1+v2+v3;
     }
     
-    public double raizQuad(double valor){
+    public double raizQuad(int valor){
         return (Math.sqrt(valor));
     }
     
