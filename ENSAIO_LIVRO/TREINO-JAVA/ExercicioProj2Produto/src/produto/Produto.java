@@ -1,13 +1,50 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+Exercicio do livro JAVA Evandro Teruel.
+Aluno: Guglielmo Targino.
+Data: 30abr24
+Versão: v0.
+*/
 package produto;
 
-/**
- *
- * @author Guglielmo H T
- */
 public class Produto {
+    private long id;
+    private String nome;
+    private double preco;
+
+public Produto(){
+    
+}
+public void setId(long a){
+    this.id=a;
+    }
+public void setNome(String b){
+    this.nome=b;
+    
+}
+public void setPreco(double c){
+    this.preco=c;    
+}
+
+public long getId(){
+    return id;
+}
+
+public String getNome(){
+    return nome;
+}
+
+public double getPreco(){
+    return preco;
+}
+
+public void diminuirPreco(double percentual){
+    this.preco-=(percentual/100)*this.preco;
+        
+}
+
+public void aumentarPreco(double percentual){
+    this.preco+=(percentual/100)*this.preco;
+    
+}
     
 }
