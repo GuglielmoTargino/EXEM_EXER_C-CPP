@@ -7,18 +7,20 @@ Data:03mai24
 Versão:v0
  */
 public class Conta {
-    private String nrbanco;
-    private String nragencia;
-    private String nrconta;
-    private String nmcliente;
-    private double saldo;
+   protected  String nrbanco;
+    protected String nragencia;
+    protected String nrconta;
+    protected String nmcliente;
+    protected double saldo;
     
     //contrutor parametrizado.
-    public Conta(String a, String b, String c, String d, double e){
-        this.nrbanco=a;
-        this.nragencia=b;
-        this.nmcliente=d;
-        this.saldo=e;        
+    public Conta(String nrbanco, String nragencia, String nrconta, String nmcliente, double saldo){
+        this.nrbanco=nrbanco;
+        this.nragencia=nragencia;
+        this.nmcliente=nrconta;
+        this.nrconta=nmcliente;
+        this.saldo=saldo; 
+        
     }
     //construtor não parametrizado.
     public Conta(){
