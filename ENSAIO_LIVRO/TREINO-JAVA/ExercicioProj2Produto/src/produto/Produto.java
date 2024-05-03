@@ -14,6 +14,12 @@ public class Produto {
 public Produto(){
     
 }
+public Produto(long x, String y, double z){
+    this.id=x;
+    this.nome=y;
+    this.preco=z;
+    
+}
 public void setId(long a){
     this.id=a;
     }
