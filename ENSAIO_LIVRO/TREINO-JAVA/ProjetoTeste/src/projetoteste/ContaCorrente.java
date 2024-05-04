@@ -19,7 +19,7 @@ public class ContaCorrente extends Conta {
         /*metodo da superclasse. ou pode usar o operador this >1
          1> para cada atributo.
         */
-        super(nrbanco,nragencia,nrconta,nmcliente,saldo);        
+        //super(nrbanco,nragencia,nrconta,nmcliente,saldo);        
         this.limitecheque=limitecheque;
         this.jurocheque=jurocheque;
         
@@ -29,6 +29,7 @@ public class ContaCorrente extends Conta {
         this.nmcliente=nmcliente;
         this.saldo=saldo;
         */
+        
         
     }
 

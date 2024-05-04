@@ -19,9 +19,15 @@ public class ContaPoupanca extends Conta{
         super(nrbanco,nragencia,nrconta,nmcliente,saldo); 
         this.dataaniversario=dataaniversario;        
     }
-    //construtor não parametrizado.
-    public ContaPoupanca(){
+     public ContaPoupanca(){
             
         }
+    
+    //construtor não parametrizado.
+
+    public Date getDataaniversario() {
+        return dataaniversario;
+    }
+   
     
 }
