@@ -2,7 +2,7 @@
 #include <stdlib.h> // Necessário para malloc e free
 
 int main() {
-    int tamanho;
+    int tamanho,i;
     
     // Pergunta ao usuário o tamanho do vetor
     printf("Digite o tamanho do vetor: ");
@@ -18,13 +18,13 @@ int main() {
     }
     
     // Preenche o vetor com valores
-    for (int i = 0; i < tamanho; i++) {
+    for (i = 0; i < tamanho; i++) {
         vetor[i] = i * 2; // Exemplo de preenchimento: múltiplos de 2
     }
     
     // Imprime os valores do vetor
     printf("Valores no vetor:\n");
-    for (int i = 0; i < tamanho; i++) {
+    for (i = 0; i < tamanho; i++) {
         printf("%d ", vetor[i]);
     }
     printf("\n");
