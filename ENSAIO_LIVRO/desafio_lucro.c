@@ -1,31 +1,43 @@
+/*
+Exercício criado em sala de aula pelo professor Luis.
+
+*/
+
 #include <stdio.h>
 
-int arr[10] ={3,2,54,81,9,1,6};
-int ind,maior,menor=0;
+int arr[10] ={3,256,54,81,9,1,6};
+int ind,a,dia,dia2=0;
+int maior=0;
+int menor=999;
+
 
 int Comprar(int vetor[]){
 
   for (ind = 0; ind < 7; ind++){
        
-    if(vetor[ind]>maior){
-      maior = vetor[ind];
-      printf(" numeos %d\n",maior);
+    if(vetor[ind]<menor){
+      menor=vetor[ind];
+      dia=ind;      
     }
       
     }
+    return menor;
   }
 
 int  Venda(int vetor[],int a){
   
   for (ind = 0; ind < 7; ind++){
-    //if (vetor[ind] > vetor[ind+1]){
+    
 
-    if(vetor[ind]< a){
-      menor = vetor[ind];
-      printf(" numeos %d\n",menor);
+    if(vetor[ind]>maior){
+      maior = vetor[ind];
+      dia2=(ind+a);
+      
     }
 
     }
+    
+    return maior;
 }
     
     
@@ -33,11 +45,12 @@ int  Venda(int vetor[],int a){
   
 
 int main(void) {
-
-  Comprar(arr);
-  printf(" numeos %d\n",maior);
-  //Venda(arr,maior);
- 
+	Comprar(arr);
+	Venda(arr,dia);
+  printf(" Melhor compra R$%d, dia %d\n",menor,dia);
+  printf(" melhor venda R$%d, dia %d\n",maior,dia2);
+  
+  
   
   return 0;
 }
