@@ -31,7 +31,7 @@ int  Venda(int vetor[],int a){
 
     if(vetor[ind]>maior){
       maior = vetor[ind];
-      dia2=(ind+a);
+      dia2=ind;
       
     }
 
