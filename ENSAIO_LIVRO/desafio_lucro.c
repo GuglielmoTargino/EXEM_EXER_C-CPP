@@ -5,52 +5,48 @@ Exercício criado em sala de aula pelo professor Luis.
 
 #include <stdio.h>
 
-int arr[10] ={3,256,54,81,9,1,6};
-int ind,a,dia,dia2=0;
-int maior=0;
-int menor=999;
+int arr[] ={3,256,54,81,9,10,6,140,560};
+int ind,a,dia,lucro=0;
+int maior=0;//referência inicial maior valor
+int menor=999;//referência inicial menor valor
+int tamanho=sizeof(arr)/sizeof(arr[0]);
 
+//Função para encontrar a melhor compra
+int Comprar(int vetor[],int tamanho ){
 
-int Comprar(int vetor[]){
-
-  for (ind = 0; ind < 7; ind++){
+  for (ind = 0; ind < tamanho; ind++){
        
     if(vetor[ind]<menor){
       menor=vetor[ind];
-      dia=ind;      
+      dia=ind+1;      
     }
       
     }
-    return menor;
-  }
-
-int  Venda(int vetor[],int a){
-  
-  for (ind = 0; ind < 7; ind++){
     
+  }
+//Função para encontrar a melhor venda após a compra
+int  Venda(int vetor[],int a,int tamanho){
+  
+  for (ind = a; ind < tamanho; ind++){    
 
     if(vetor[ind]>maior){
       maior = vetor[ind];
-      dia2=ind;
-      
+      dia=ind+1;      
     }
 
     }
-    
-    return maior;
+    //retorna valor do lucro
+    return maior-menor;
 }
-    
-    
-
-  
 
 int main(void) {
-	Comprar(arr);
-	Venda(arr,dia);
-  printf(" Melhor compra R$%d, dia %d\n",menor,dia);
-  printf(" melhor venda R$%d, dia %d\n",maior,dia2);
-  
-  
+	
+	Comprar(arr,tamanho);//chama função comprar
+    printf("Melhor compra R$%d.00. no dia %d\n",menor,dia);
+  	lucro=Venda(arr,dia,tamanho);//chama função venda, retorna com 
+  	//o lucro
+    printf("Melhor venda R$%d.00, no dia %d\n",maior,dia);
+    printf("Lucro de R$%d.00.\n",lucro);  
   
   return 0;
 }
