@@ -7,5 +7,6 @@
  * @author Guglielmo H T
  */
 public interface calcularMedia {
+    public abstract double Media(double v1,double v2);
     
 }
