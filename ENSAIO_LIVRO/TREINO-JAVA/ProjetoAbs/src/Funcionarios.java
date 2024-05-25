@@ -13,6 +13,7 @@ public abstract class Funcionarios {
     private double desconto;
     
     public abstract String obterCargo();
+    
     //construtir da classe funcionarios
     public Funcionarios(int id, String nome,String categoria,double salario,double desconto){
         this.id=id;
@@ -21,5 +22,47 @@ public abstract class Funcionarios {
         this.salario=salario;
         this.desconto=desconto;
     }
-    
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public double getDesconto() {
+        return desconto;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+
+    public void setDesconto(double desconto) {
+        this.desconto = desconto;
+    }
+    public double calcularSalario(){
+        return salario-desconto;
+    }
 }
