@@ -1,6 +1,9 @@
 
 package projetoabs;
 
+import admin.Administrativo;
+
+
 /**exercício do livro JAVA prof. Evandro Teruel
  * @author Guglielmo H 
  * Data:25mai24
