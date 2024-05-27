@@ -16,6 +16,7 @@ public class ProjetoAbs {
      */
     public static void main(String[] args) {
         Administrativo adm=new Administrativo(10,"Guga","A",10678.56,789.53);
+        System.out.println("Nome"+adm.getNome()+"\n"+"Cargo"+adm.obterCargo()+"\n"+"Salario"+adm.calcularSalario()+"\n");
           
         
     }
