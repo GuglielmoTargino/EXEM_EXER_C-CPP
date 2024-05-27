@@ -12,7 +12,9 @@ public class ProjetoAbs {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Administrativo adm=new Administrativo(10,"Guga","A",10678.56,789.53);
+          
+        
     }
     
 }
