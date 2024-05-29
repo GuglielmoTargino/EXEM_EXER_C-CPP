@@ -6,14 +6,28 @@ package exercicioproposto1;
 
 
 public class Juridica extends Pessoa{
-    private String cnpj;
+    private String cnpj; 
     
-    public Juridica(String cnpj){
-        this.cnpj=cnpj;
-        
-        
-        
+    //construtor
+    public Juridica(String cnpj,String nome){
+        super(nome);
+        this.cnpj=cnpj;        
     }
-    
-    
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+    @Override
+   public void escreverNome(){
+       System.out.println("Nome é"+super.getNome());
+   }
+   @Override
+   public boolean validarDocumento(){
+       return true;
+   }
+            
 }
