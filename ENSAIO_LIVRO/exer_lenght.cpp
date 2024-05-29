@@ -24,7 +24,7 @@ int main(){
 
 	
 	//sizeof só conta os bytes do tipo da variável.
-	cout<<sizeof(ch);
+	cout<<sizeof(ght[dara]);
 	
 	return 0;
 	
