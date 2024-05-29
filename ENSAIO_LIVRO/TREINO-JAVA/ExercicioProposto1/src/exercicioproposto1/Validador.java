@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+/**
+ *Exercicio proposto 1 do livro Java do prof. Evandro Teruel.
+ * @author Guglielmo H T
  */
 package exercicioproposto1;
 
-/**
- *
- * @author Guglielmo H T
- */
 public interface Validador {
+    public boolean validarDocumento();
     
 }
