@@ -7,7 +7,6 @@ Versão: v0.
 */
 
 #include <iostream>
-#include <iomanip>
 #include <locale>
 
 #define altura 5
@@ -19,7 +18,6 @@ int tamanho;
 
 int main (void){
 	setlocale(LC_ALL,"Portuguese");
-	int x,y;
 	int matriz[altura][largura];
 	tamanho=sizeof(matriz)/sizeof(matriz[0]);
 	
