@@ -10,11 +10,17 @@ public class TesteTryCath {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        String[] lista=new String[3];
-        lista[0]="dara";
-        lista[1]="lic";
-        lista[2]="NIA";
-        System.out.println("nome é_"+lista[1]);
-    }
+        String[] lista=new String[2];
+        
+        try{
+            lista[0]="dara";
+            lista[1]="lic";
+            lista[2]="NIA";
+            System.out.println("nome é_"+lista[1]);
+        
+    }catch(ArrayIndexOutOfBoundsException v){
+    System.out.println("Array muito longa");
+}
+}
     
 }
