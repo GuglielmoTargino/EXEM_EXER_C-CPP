@@ -10,54 +10,38 @@ VERSAO:V0
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <io.h>
-#include <string.h>
-//#include <fnct1.h>
 
-#define BUF_SIZE 128
+typedef struct {
+    int id;
+    char name[50];
+    float salary;
+} Employee;
 
-void input(char *buf,int fd1);
-void display(char *buf,int fd2);
-void main(void){
-	char buf[BUF_SIZE];
-	int fd1, fd2;
-	
-	if((fd1=open("test",o_wronly))==1){//abre para escrita
-	printf("o arquivo nao abre\n");
-	exit(1);
-		
-	}
-	input(buf,fd1);
-	//fecha o arquivo e le de volta
-	close(fd1);
-	
-	if((fd2=open("test",o_rdonly))==-1){//abre para leitura
-	printf("o arquivo nao abre\n");
-	exit(1);
-	
-	}
-	display(buf,fd2);
-	close(fd2);
-}
-//insere testo
+int main() {
+    FILE *file;
+    Employee emp = {1, "John Doe", 55000.0f};
 
-void input(char *buf, int fd1){
-	int t;
-	do{
-		for(t=0;t<BUF_SIZE;t++)buf[t]='\0';
-		gets(buf);//le teclado
-		if(write(fd1,buf,BUF_SIZE)!=BUF_SIZE){
-			printf("erro de escrita\n");
-			exit(1);
-			
-		}
-	}while(strcmp(buf,"quit"));
+    // Abre o arquivo para escrita binária
+    //file = fopen("C:/caminho/para/seu/diretorio/employee.dat", "wb");
+
+    file = fopen("employee.dat", "wb");
+    if (file == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+
+    // Escreve a estrutura emp no arquivo
+    size_t elements_written = fwrite(&emp, sizeof(Employee), 1, file);
+    if (elements_written != 1) {
+        printf("Erro ao escrever no arquivo.\n");
+    } else {
+        printf("Dados escritos com sucesso!\n");
+    }
+
+    // Fecha o arquivo
+    fclose(file);
+
+    return 0;
 }
-//mostra arquivo
-void display (char *buf, int fd2){
-	for(;;){
-		if(read(fd2,buf,BUF_SIZE)==0)return;
-		printf("%s\n",buf);
-	}
-}
+
 
