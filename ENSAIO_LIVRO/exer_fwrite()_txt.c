@@ -8,25 +8,38 @@ typedef struct {
 } Employee;
 
 int main() {
+	int i;
+	char x[10];
+	float z;
 	
-	char fguga[10];
+	
+
 	
 	printf("digite um nome:");
-	gets(fguga);
+	gets(x);
+	//scanf("%s",&x);
+	printf("digite um numero:");
+	scanf("%d",&i);
+	
+	printf("digite um salario");
+	scanf("%f",&z);
+	
+	
 		
 
     FILE *file;
     Employee emp;
     //strcpy(emp.name, "Camiseta");
-    strcpy(emp.name,fguga);
-    emp.id=10;
-    emp.salary=5.5;
+    emp.id=i;
+    strcpy(emp.name,x);
+    
+    emp.salary=z;
     //Employee emp = {1,"guga", 55000.0f};
 
     // Abre o arquivo para escrita em modo texto
     //file = fopen("C:/caminho/para/seu/diretorio/employee.txt", "w");
 
-    file = fopen("employee2.txt", "w");
+    file = fopen("employee2.txt","w");
     if (file == NULL) {
         printf("Erro ao abrir o arquivo.\n");
         return 1;
